@@ -12,6 +12,24 @@ python3 -m http.server 8080
 
 Open [http://localhost:8080](http://localhost:8080).
 
+## Run with Docker
+
+### Use GitHub Container Registry (Recommended)
+You can pull and run the pre-built image directly without cloning the code:
+
+```bash
+docker pull ghcr.io/diptamahardhika/paint-index:main
+docker run -d --name paint-index -p 9000:80 ghcr.io/diptamahardhika/paint-index:main
+```
+
+### Use Docker Compose
+If you have the repository cloned locally, use the provided compose file:
+
+```bash
+docker compose up -d --build
+```
+The app will be available at [http://localhost:9000](http://localhost:9000).
+
 ## Features
 
 - **Browse** — Search and filter 189 Citadel colours (B&C index #1–189) and 447 Vallejo Model Color / Model Air paints.
