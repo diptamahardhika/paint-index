@@ -344,7 +344,7 @@ async function init() {
   try {
     await loadPaints();
   } catch (err) {
-    document.body.innerHTML = `<main style="padding:2rem;font-family:system-ui"><h1>Could not load paint data</h1><p>Start a local server in the <code>paint-index</code> folder:</p><pre>cd paint-index && python3 -m http.server 8080</pre><p>Then open <a href="http://localhost:8080">http://localhost:8080</a></p><pre>${escapeHtml(String(err))}</pre></main>`;
+    document.body.innerHTML = `<main style="padding:2rem;font-family:system-ui"><h1>Could not load paint data</h1><p>Start a local server in the <code>paint-index</code> folder:</p><pre>cd paint-index && python3 -m http.server 8081</pre><p>Then open <a href="http://localhost:8081">http://localhost:8081</a></p><pre>${escapeHtml(String(err))}</pre></main>`;
     return;
   }
   bindTabs();

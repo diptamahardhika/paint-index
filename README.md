@@ -7,10 +7,10 @@ Cross-reference **Citadel Colour** and **Vallejo** hobby paints with HEX / Bolte
 Browsers block loading JSON over `file://`. From this folder:
 
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8081
 ```
 
-Open [http://localhost:8080](http://localhost:8080).
+Open [http://localhost:8081](http://localhost:8081).
 
 ## Run with Docker
 
@@ -19,7 +19,7 @@ You can pull and run the pre-built image directly without cloning the code:
 
 ```bash
 docker pull ghcr.io/diptamahardhika/paint-index:main
-docker run -d --name paint-index -p 9000:80 ghcr.io/diptamahardhika/paint-index:main
+docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:main
 ```
 
 ### Use Docker Compose
@@ -28,7 +28,7 @@ If you have the repository cloned locally, use the provided compose file:
 ```bash
 docker compose up -d --build
 ```
-The app will be available at [http://localhost:9000](http://localhost:9000).
+The app will be available at [http://localhost:8081](http://localhost:8081).
 
 ## Features
 

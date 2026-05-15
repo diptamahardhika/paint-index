@@ -5,5 +5,5 @@ services:
     build: .
     container_name: paint-index-app
     ports:
-      - "9000:80"
+      - "8081:80"
     restart: unless-stopped
