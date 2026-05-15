@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Paint Index app icon</title>
+  <desc id="desc">A paint palette with color wells and a brush for the Paint Index app.</desc>
+  <defs>
+    <linearGradient id="bg" x1="72" y1="48" x2="440" y2="464" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2a2621"/>
+      <stop offset="1" stop-color="#141312"/>
+    </linearGradient>
+    <linearGradient id="palette" x1="113" y1="91" x2="355" y2="391" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3e8d7"/>
+      <stop offset="1" stop-color="#cdb89f"/>
+    </linearGradient>
+    <linearGradient id="brush" x1="178" y1="340" x2="420" y2="99" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6b3e2a"/>
+      <stop offset="0.5" stop-color="#c45c26"/>
+      <stop offset="1" stop-color="#f0b25d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path
+    fill="#0f0e0d"
+    opacity="0.3"
+    d="M156 403c77 48 198 42 259-24 59-64 58-171-1-238-53-60-151-87-232-49-80 38-125 126-104 207 12 47 39 82 78 104Z"
+  />
+
+  <g filter="url(#shadow)">
+    <path
+      fill="url(#palette)"
+      d="M254 84c-95 0-172 66-172 153 0 91 73 170 181 170h20c18 0 33-14 33-32 0-13-7-24-17-29-12-7-18-20-14-33 5-16 20-26 37-24l40 4c44 4 73-23 73-66 0-81-81-143-181-143Z"
+    />
+    <circle cx="181" cy="173" r="33" fill="#1a4d8c"/>
+    <circle cx="267" cy="148" r="31" fill="#c45c26"/>
+    <circle cx="351" cy="191" r="31" fill="#2d6b3a"/>
+    <circle cx="154" cy="264" r="30" fill="#d4a84b"/>
+    <circle cx="246" cy="238" r="36" fill="#ece6df" opacity="0.9"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path
+      fill="url(#brush)"
+      d="M201 351 367 185c20-20 44-27 63-21 6 2 8 9 4 14L250 362l-47 11c-13 3-21-12-12-22h10Z"
+    />
+    <path
+      fill="#f4d7b3"
+      d="M383 169c19-14 43-17 60-8 5 3 7 9 4 14-11 18-29 29-51 32l-31 5 18-43Z"
+    />
+    <path
+      fill="#2f2a25"
+      d="m179 385 24-34 47 11-35 25c-16 11-36 17-55 18 2-8 9-15 19-20Z"
+    />
+    <path
+      fill="#ece6df"
+      opacity="0.75"
+      d="M229 339 370 198l17 17L246 356l-17-17Z"
+    />
+  </g>
+</svg>
