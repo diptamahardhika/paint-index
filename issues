@@ -1,0 +1,3 @@
+improvement for HEX lab: Lookup in paint index
+
+Enter a color or Citadel index # (1–189) to find the nearest paints in the library. This is only 189, but the actual citadel database is larger than that
