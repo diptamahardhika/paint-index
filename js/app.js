@@ -67,7 +67,7 @@ function paintCard(p, { onClick, selected = false } = {}) {
   el.innerHTML = [
     `<div class="card-swatch" style="background:${swatchBackground(p)}"></div>`,
     `<div class="card-body">`,
-    `<span class="brand-pill ${p.brand}">${brandLabel(p.brand)}</span>`,
+    `<span class="brand-pill ${p.brand}">${brandLabel(p.brand)} · ${escapeHtml(p.line)}</span>`,
     `<h3>${escapeHtml(p.name)}</h3>`,
     `<code>${escapeHtml(p.hex)} · ${escapeHtml(p.indexLabel)}</code>`,
     `</div>`,
@@ -93,7 +93,7 @@ function renderMatchList(container, items, onPick) {
       <div class="match-swatch" style="background:${swatchBackground(p)}"></div>
       <div class="match-meta">
         <strong>${escapeHtml(p.name)}</strong>
-        <span>${escapeHtml(p.indexLabel)} · ${escapeHtml(p.hex)}</span>
+        <span>${escapeHtml(p.line)} · ${escapeHtml(p.indexLabel)} · ${escapeHtml(p.hex)}</span>
       </div>
       <div class="match-score ${score.tone}">ΔE ${delta.toFixed(1)}<br>${score.label}</div>
     `;
@@ -192,10 +192,10 @@ function renderMatchDetail() {
     `<div class="detail-hero">`,
     `<div class="detail-swatch" style="background:${swatchBackground(p)}"></div>`,
     `<div>`,
-    `<span class="brand-pill ${p.brand}">${brandLabel(p.brand)}</span>`,
+    `<span class="brand-pill ${p.brand}">${brandLabel(p.brand)} · ${escapeHtml(p.line)}</span>`,
     `<h2>${escapeHtml(p.name)}</h2>`,
     `<code>${escapeHtml(p.hex)} · ${escapeHtml(p.indexLabel)}</code>`,
-    `<p class="stats">RGB ${escapeHtml(p.rgb)} · B&amp;C ${hexToBnc(p.hex)}</p>`,
+    `<p class="stats">RGB ${escapeHtml(p.rgb)} · B&amp;C ${hexToBnc(p.hex)} · ${escapeHtml(p.type || p.line)}</p>`,
     `</div></div>`,
     `<h3 style="margin:0 0 0.5rem;font-size:0.9rem">Closest in ${other}</h3>`,
     `<ul class="match-list" id="xref-list"></ul>`,
@@ -212,13 +212,19 @@ function renderMatchDetail() {
 function updateLineFilter() {
   const sel = $("#browse-line");
   const brand = state.browseBrand;
-  const lines = new Set();
+  const lines = new Set(); 
   for (const p of getPaints()) {
     if (brand === "all" || p.brand === brand) lines.add(p.line);
   }
   const current = sel.value;
   sel.innerHTML = '<option value="all">All lines</option>';
-  for (const line of [...lines].sort()) {
+  const sortedLines = [...lines].sort((a, b) => {
+    // Put official types first, then 'Classic'
+    if (a === 'Classic') return 1;
+    if (b === 'Classic') return -1;
+    return a.localeCompare(b);
+  });
+  for (const line of sortedLines) {
     const opt = document.createElement("option");
     opt.value = line;
     opt.textContent = line;

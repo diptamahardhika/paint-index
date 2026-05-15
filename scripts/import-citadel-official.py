@@ -115,9 +115,9 @@ def pick_official(
     return options[0]
 
 
-def apply_official_fields(target: dict, official: dict, *, line: str) -> None:
+def apply_official_fields(target: dict, official: dict) -> None:
     target["name"] = official["name"]
-    target["line"] = line
+    target["line"] = official["type"].capitalize()
     target["type"] = official["type"]
     target["hex"] = official["hex"]
     target["rgb"] = official["rgb"]
@@ -134,61 +134,52 @@ def apply_official_fields(target: dict, official: dict, *, line: str) -> None:
 def main() -> None:
     md = fetch_official_md()
     by_name = parse_official_table(md)
-    contrast_rows: list[dict] = []
-    seen_contrast: set[str] = set()
-    for entries in by_name.values():
-        for entry in entries:
-            if entry["type"] != "contrast":
-                continue
-            key = norm(entry["name"])
-            if key in seen_contrast:
-                continue
-            seen_contrast.add(key)
-            contrast_rows.append(entry)
-    contrast_rows.sort(key=lambda e: e["name"].lower())
 
     data = json.loads(CITADEL_JSON.read_text(encoding="utf-8"))
-    bnc = [c for c in data["colors"] if c.get("line") != "Contrast"]
-    max_bnc_id = max(c["id"] for c in bnc)
+    colors = data["colors"]
+    
+    # Track which official paints we've mapped to existing library entries
+    used_official_keys: set[str] = set()
 
     updated = 0
     kept_legacy = 0
-    for paint in bnc:
+    for paint in colors:
         official = pick_official(paint["name"], by_name=by_name)
         if official:
-            apply_official_fields(paint, official, line="Citadel Colours")
+            apply_official_fields(paint, official)
+            used_official_keys.add(f"{norm(official['name'])}_{official['type']}")
             updated += 1
         else:
-            paint["line"] = paint.get("line") or "Citadel Colours"
+            # Ensure we don't use the generic "Citadel Colours" line name anymore
+            current_line = paint.get("line")
+            if not current_line or current_line == "Citadel Colours":
+                paint["line"] = "Classic"
             kept_legacy += 1
 
-    next_id = max_bnc_id + 1
-    contrast_out = []
-    for official in contrast_rows:
-        entry = {"id": next_id, "line": "Contrast"}
-        apply_official_fields(entry, official, line="Contrast")
-        contrast_out.append(entry)
-        next_id += 1
+    # Add all official paints that weren't in our existing library
+    next_id = max((c["id"] for c in colors), default=0) + 1
+    added = 0
+    for entries in by_name.values():
+        for official in entries:
+            key = f"{norm(official['name'])}_{official['type']}"
+            if key not in used_official_keys:
+                entry = {"id": next_id}
+                apply_official_fields(entry, official)
+                colors.append(entry)
+                next_id += 1
+                added += 1
 
-    data["name"] = (
-        f"Citadel Colours (B&C {len(bnc)} + Contrast {len(contrast_out)})"
-    )
-    data["source"] = (
-        "B&C index hex approximations; official values from "
-        "citadelcolour.com via "
-        "github.com/SimoGecko/CitadelColours"
-    )
-    data["colors"] = bnc + contrast_out
+    data["name"] = f"Citadel Colours ({len(colors)} paints)"
 
     CITADEL_JSON.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     print(
-        f"Updated {updated} B&C paints from official table; "
+        f"Updated {updated} existing paints from official table; "
         f"{kept_legacy} kept legacy hex (no official match)."
     )
-    print(f"Wrote {len(contrast_out)} Contrast paints (official citadelcolour.com).")
+    print(f"Added {added} new paints from official table.")
 
 
 if __name__ == "__main__":
