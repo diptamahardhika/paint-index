@@ -32,7 +32,7 @@ The app will be available at [http://localhost:8081](http://localhost:8081).
 
 ## Features
 
-- **Browse** — Search and filter 189 Citadel colours (B&C index #1–189) and 447 Vallejo Model Color / Model Air paints.
+- **Browse** — Search and filter 352 Citadel colours and 1,268 Vallejo paints across 20 paint lines.
 - **Cross-reference** — Pick a paint; see the closest matches in the other brand (CIE76 ΔE in Lab space).
 - **HEX lab** — Convert HEX ↔ RGB ↔ B&C format (`231F20`), copy forum BBCode, look up Citadel index numbers, find nearest paints for any color.
 
@@ -40,7 +40,7 @@ The app will be available at [http://localhost:8081](http://localhost:8081).
 
 | File | Source |
 |------|--------|
-| `data/citadel.json` | Your B&C 189 Citadel library + hex approximations |
-| `data/vallejo.json` | Vallejo Model Color & Model Air (hex from community swatches) |
+| `data/citadel.json` | Citadel colours from the B&C index plus official Citadel table imports |
+| `data/vallejo.json` | Full Vallejo table from [`Arcturus5404/miniature-paints`](https://github.com/Arcturus5404/miniature-paints/blob/main/paints/Vallejo.md) |
 
-Hex values are approximations from online swatches (see [B&C paint hex topic](https://bolterandchainsword.com/topic/352780-paint-color-hexadecimal-codes/)). Washes, metallics, and textures may not match real bottles or your monitor.
+Hex values are approximations from online swatches and source tables. Washes, metallics, textures, and transparent paints may not match real bottles or your monitor.
