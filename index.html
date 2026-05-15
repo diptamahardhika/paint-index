@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paint Index — Citadel & Vallejo cross-reference</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Paint Index</h1>
+      <p>
+        Cross-reference Citadel Colour &amp; Vallejo paints · HEX / B&amp;C index
+        converter · ΔE color matching
+      </p>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button type="button" class="active" data-tab="browse" role="tab">
+        Browse
+      </button>
+      <button type="button" data-tab="match" role="tab">Cross-reference</button>
+      <button type="button" data-tab="hex" role="tab">HEX lab</button>
+    </nav>
+
+    <main>
+      <section id="panel-browse" class="panel active" role="tabpanel">
+        <div class="toolbar">
+          <input
+            type="search"
+            id="browse-search"
+            placeholder="Search by name, hex, Citadel #, Vallejo code…"
+            autocomplete="off"
+          />
+          <select id="browse-brand" aria-label="Brand filter">
+            <option value="all">All brands</option>
+            <option value="citadel">Citadel Colour</option>
+            <option value="vallejo">Vallejo</option>
+          </select>
+          <select id="browse-line" aria-label="Line filter">
+            <option value="all">All lines</option>
+          </select>
+        </div>
+        <p class="stats" id="browse-stats"></p>
+        <div id="browse-grid" class="grid"></div>
+      </section>
+
+      <section id="panel-match" class="panel" role="tabpanel">
+        <div class="split">
+          <div>
+            <div class="toolbar">
+              <input
+                type="search"
+                id="match-search"
+                placeholder="Find a paint to match…"
+                autocomplete="off"
+              />
+            </div>
+            <p class="stats" id="match-stats"></p>
+            <div id="match-grid" class="grid"></div>
+          </div>
+          <div>
+            <div id="match-detail" class="detail-panel empty">
+              Select a paint to see the closest matches in the other brand.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-hex" class="panel" role="tabpanel">
+        <div class="hex-lab">
+          <article class="hex-card">
+            <h3>HEX ↔ RGB converter</h3>
+            <div
+              class="hex-preview"
+              id="hex-preview"
+              style="background: #231f20"
+            ></div>
+            <div class="field-row">
+              <label for="hex-input">HEX</label>
+              <input type="text" id="hex-input" value="#231f20" spellcheck="false" />
+            </div>
+            <div class="field-row">
+              <label for="bnc-input">B&amp;C</label>
+              <input
+                type="text"
+                id="bnc-input"
+                value="231F20"
+                spellcheck="false"
+                title="Bolter & Chainsword index format (6-char hex, no #)"
+              />
+            </div>
+            <div class="field-row">
+              <label for="rgb-input">RGB</label>
+              <input type="text" id="rgb-input" value="35, 31, 32" spellcheck="false" />
+            </div>
+            <div class="btn-row">
+              <button type="button" class="secondary" data-copy="hex">
+                Copy HEX
+              </button>
+              <button type="button" class="secondary" data-copy="bnc">
+                Copy B&amp;C
+              </button>
+              <button type="button" class="secondary" data-copy="rgb">
+                Copy RGB
+              </button>
+              <button type="button" class="secondary" data-copy="bbcode">
+                Copy BBCode
+              </button>
+            </div>
+          </article>
+
+          <article class="hex-card">
+            <h3>Lookup in paint index</h3>
+            <p class="stats">
+              Enter a color or Citadel index # (1–189) to find the nearest paints
+              in the library.
+            </p>
+            <div class="field-row">
+              <label for="lookup-citadel-id">Citadel #</label>
+              <input
+                type="number"
+                id="lookup-citadel-id"
+                min="1"
+                max="189"
+                placeholder="e.g. 1"
+              />
+            </div>
+            <p class="stats" id="lookup-stats"></p>
+            <ul id="lookup-results" class="match-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <footer class="sources">
+        <strong>Data sources &amp; notes</strong>
+        <ul>
+          <li>
+            Citadel: 189 B&amp;C index + 61 Contrast paints; hex from
+            <a href="https://citadelcolour.com/">citadelcolour.com</a> via
+            <a href="https://github.com/SimoGecko/CitadelColours">SimoGecko/CitadelColours</a>
+            (Nov 2024). Gradients use darker hex for matching.
+          </li>
+          <li>
+            Vallejo: Model Color, Model Air (70.xxx / 71.xxx), and Xpress Color
+            (72.4xx one-coat range).
+          </li>
+          <li>
+            Cross-brand matches use ΔE (CIE76 in Lab). Washes, metallics, and
+            textures may differ from swatches on screen.
+          </li>
+        </ul>
+      </footer>
+    </main>
+
+    <div id="toast" class="copied-toast" aria-live="polite">Copied</div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

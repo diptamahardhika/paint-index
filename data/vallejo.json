@@ -1,0 +1,4570 @@
+{
+  "type": "vallejo",
+  "name": "Vallejo (Model Color + Model Air + Xpress Color)",
+  "source": "photoshoplus.fr",
+  "colors": [
+    {
+      "id": 1,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.951",
+      "name": "White",
+      "hex": "#ffffff",
+      "rgb": "255,255,255"
+    },
+    {
+      "id": 2,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.919",
+      "name": "Cold White",
+      "hex": "#f6f5f9",
+      "rgb": "246,245,249"
+    },
+    {
+      "id": 3,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.820",
+      "name": "Off-White",
+      "hex": "#f4ede6",
+      "rgb": "244,237,230"
+    },
+    {
+      "id": 4,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.918",
+      "name": "Ivory",
+      "hex": "#eae2d1",
+      "rgb": "234,226,209"
+    },
+    {
+      "id": 5,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.928",
+      "name": "Light Flesh",
+      "hex": "#f2d3b7",
+      "rgb": "242,211,183"
+    },
+    {
+      "id": 6,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.815",
+      "name": "Basic Skin Tone",
+      "hex": "#e8ac8c",
+      "rgb": "232,172,140"
+    },
+    {
+      "id": 7,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.835",
+      "name": "Salmon Rose",
+      "hex": "#e18e7b",
+      "rgb": "225,142,123"
+    },
+    {
+      "id": 8,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.805",
+      "name": "German Orange",
+      "hex": "#bb6255",
+      "rgb": "187,98,85"
+    },
+    {
+      "id": 9,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.944",
+      "name": "Old Rose",
+      "hex": "#bc6e6f",
+      "rgb": "188,110,111"
+    },
+    {
+      "id": 10,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.803",
+      "name": "Brown Rose",
+      "hex": "#9c665f",
+      "rgb": "156,102,95"
+    },
+    {
+      "id": 11,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.745",
+      "name": "Dark Rose",
+      "hex": "#7f5251",
+      "rgb": "127,82,81"
+    },
+    {
+      "id": 12,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.845",
+      "name": "Sunny Skin Tone",
+      "hex": "#eb9645",
+      "rgb": "235,150,69"
+    },
+    {
+      "id": 13,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.804",
+      "name": "Beige Red",
+      "hex": "#b06e4a",
+      "rgb": "176,110,74"
+    },
+    {
+      "id": 14,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.843",
+      "name": "Cork Brown",
+      "hex": "#9f6f4e",
+      "rgb": "159,111,78"
+    },
+    {
+      "id": 15,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.876",
+      "name": "Brown Sand",
+      "hex": "#916043",
+      "rgb": "145,96,67"
+    },
+    {
+      "id": 16,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.746",
+      "name": "Chestnut Brown",
+      "hex": "#603f39",
+      "rgb": "96,63,57"
+    },
+    {
+      "id": 17,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.955",
+      "name": "Flat Flesh",
+      "hex": "#de9a58",
+      "rgb": "222,154,88"
+    },
+    {
+      "id": 18,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.927",
+      "name": "Dark Flesh",
+      "hex": "#d19239",
+      "rgb": "209,146,57"
+    },
+    {
+      "id": 19,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.860",
+      "name": "Medium Fleshtone",
+      "hex": "#b0793e",
+      "rgb": "176,121,62"
+    },
+    {
+      "id": 20,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.929",
+      "name": "Light Brown",
+      "hex": "#a05a31",
+      "rgb": "160,90,49"
+    },
+    {
+      "id": 21,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.766",
+      "name": "Cream White",
+      "hex": "#e1d1c3",
+      "rgb": "225,209,195"
+    },
+    {
+      "id": 22,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.837",
+      "name": "Pale Sand",
+      "hex": "#e3c28d",
+      "rgb": "227,194,141"
+    },
+    {
+      "id": 23,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.858",
+      "name": "Ice Yellow",
+      "hex": "#eccf6f",
+      "rgb": "236,207,111"
+    },
+    {
+      "id": 24,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.949",
+      "name": "Light Yellow",
+      "hex": "#f7d345",
+      "rgb": "247,211,69"
+    },
+    {
+      "id": 25,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.952",
+      "name": "Lemon Yellow",
+      "hex": "#e5d102",
+      "rgb": "229,209,2"
+    },
+    {
+      "id": 26,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.915",
+      "name": "Deep Yellow",
+      "hex": "#efc600",
+      "rgb": "239,198,0"
+    },
+    {
+      "id": 27,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.953",
+      "name": "Flat Yellow",
+      "hex": "#f5b934",
+      "rgb": "245,185,52"
+    },
+    {
+      "id": 28,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.948",
+      "name": "Golden Yellow",
+      "hex": "#f7a833",
+      "rgb": "247,168,51"
+    },
+    {
+      "id": 29,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.911",
+      "name": "Light Orange",
+      "hex": "#ed7225",
+      "rgb": "237,114,37"
+    },
+    {
+      "id": 30,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.851",
+      "name": "Bright Orange",
+      "hex": "#dd5a20",
+      "rgb": "221,90,32"
+    },
+    {
+      "id": 31,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.956",
+      "name": "Clear Orange",
+      "hex": "#cc4625",
+      "rgb": "204,70,37"
+    },
+    {
+      "id": 32,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.909",
+      "name": "Vermilion",
+      "hex": "#c32928",
+      "rgb": "195,41,40"
+    },
+    {
+      "id": 33,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.908",
+      "name": "Carmine Red",
+      "hex": "#96201d",
+      "rgb": "150,32,29"
+    },
+    {
+      "id": 34,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.926",
+      "name": "Red",
+      "hex": "#7a2725",
+      "rgb": "122,39,37"
+    },
+    {
+      "id": 35,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.747",
+      "name": "Faded Red",
+      "hex": "#ba584e",
+      "rgb": "186,88,78"
+    },
+    {
+      "id": 36,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.829",
+      "name": "Amaranth Red",
+      "hex": "#d14e30",
+      "rgb": "209,78,48"
+    },
+    {
+      "id": 37,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.817",
+      "name": "Scarlet",
+      "hex": "#c13d2e",
+      "rgb": "193,61,46"
+    },
+    {
+      "id": 38,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.947",
+      "name": "Dark Vermilion",
+      "hex": "#b52926",
+      "rgb": "181,41,38"
+    },
+    {
+      "id": 39,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.957",
+      "name": "Flat Red",
+      "hex": "#a12b28",
+      "rgb": "161,43,40"
+    },
+    {
+      "id": 40,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.946",
+      "name": "Dark Red",
+      "hex": "#692e24",
+      "rgb": "105,46,36"
+    },
+    {
+      "id": 41,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.859",
+      "name": "Black Red",
+      "hex": "#542e2a",
+      "rgb": "84,46,42"
+    },
+    {
+      "id": 42,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.748",
+      "name": "Light Pink",
+      "hex": "#e08da2",
+      "rgb": "224,141,162"
+    },
+    {
+      "id": 43,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.958",
+      "name": "Pink",
+      "hex": "#b14e7b",
+      "rgb": "177,78,123"
+    },
+    {
+      "id": 44,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.945",
+      "name": "Magenta",
+      "hex": "#902f54",
+      "rgb": "144,47,84"
+    },
+    {
+      "id": 45,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.802",
+      "name": "Sunset Red",
+      "hex": "#be2a4a",
+      "rgb": "190,42,74"
+    },
+    {
+      "id": 46,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.812",
+      "name": "Violet Red",
+      "hex": "#63343e",
+      "rgb": "99,52,62"
+    },
+    {
+      "id": 47,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.959",
+      "name": "Purple",
+      "hex": "#523052",
+      "rgb": "82,48,82"
+    },
+    {
+      "id": 48,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.810",
+      "name": "Royal Purple",
+      "hex": "#4a2640",
+      "rgb": "74,38,64"
+    },
+    {
+      "id": 49,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.749",
+      "name": "Dark Purple",
+      "hex": "#442633",
+      "rgb": "68,38,51"
+    },
+    {
+      "id": 50,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.750",
+      "name": "Light Violet",
+      "hex": "#a793ba",
+      "rgb": "167,147,186"
+    },
+    {
+      "id": 51,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.811",
+      "name": "Blue Violet",
+      "hex": "#5d3875",
+      "rgb": "93,56,117"
+    },
+    {
+      "id": 52,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.807",
+      "name": "Oxford Blue",
+      "hex": "#3d3853",
+      "rgb": "61,56,83"
+    },
+    {
+      "id": 53,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.960",
+      "name": "Violet",
+      "hex": "#3b2b4b",
+      "rgb": "59,43,75"
+    },
+    {
+      "id": 54,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.751",
+      "name": "Black Violet",
+      "hex": "#382931",
+      "rgb": "56,41,49"
+    },
+    {
+      "id": 55,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.902",
+      "name": "Azure",
+      "hex": "#5b6a9e",
+      "rgb": "91,106,158"
+    },
+    {
+      "id": 56,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.965",
+      "name": "Prussian Blue",
+      "hex": "#38405d",
+      "rgb": "56,64,93"
+    },
+    {
+      "id": 57,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.899",
+      "name": "Dark Prussian Blue",
+      "hex": "#262539",
+      "rgb": "38,37,57"
+    },
+    {
+      "id": 58,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.901",
+      "name": "Pastel Blue",
+      "hex": "#5f7a91",
+      "rgb": "95,122,145"
+    },
+    {
+      "id": 59,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.962",
+      "name": "Flat Blue",
+      "hex": "#3e4874",
+      "rgb": "62,72,116"
+    },
+    {
+      "id": 60,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.809",
+      "name": "Royal Blue",
+      "hex": "#1a427d",
+      "rgb": "26,66,125"
+    },
+    {
+      "id": 61,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.930",
+      "name": "Dark Blue",
+      "hex": "#263361",
+      "rgb": "38,51,97"
+    },
+    {
+      "id": 62,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.925",
+      "name": "Blue",
+      "hex": "#372c4b",
+      "rgb": "55,44,75"
+    },
+    {
+      "id": 63,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.752",
+      "name": "Infantry Blue",
+      "hex": "#25202b",
+      "rgb": "37,32,43"
+    },
+    {
+      "id": 64,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.961",
+      "name": "Sky Blue",
+      "hex": "#74b7d0",
+      "rgb": "116,183,208"
+    },
+    {
+      "id": 65,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.844",
+      "name": "Deep Sky Blue",
+      "hex": "#4d95c4",
+      "rgb": "77,149,196"
+    },
+    {
+      "id": 66,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.841",
+      "name": "Andrea Blue",
+      "hex": "#0070ac",
+      "rgb": "0,112,172"
+    },
+    {
+      "id": 67,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.963",
+      "name": "Medium Blue",
+      "hex": "#16416d",
+      "rgb": "22,65,109"
+    },
+    {
+      "id": 68,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.753",
+      "name": "Light Blue Green",
+      "hex": "#0097a4",
+      "rgb": "0,151,164"
+    },
+    {
+      "id": 69,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.808",
+      "name": "Blue Green",
+      "hex": "#007886",
+      "rgb": "0,120,134"
+    },
+    {
+      "id": 70,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.840",
+      "name": "Light Turquoise",
+      "hex": "#00688b",
+      "rgb": "0,104,139"
+    },
+    {
+      "id": 71,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.966",
+      "name": "Turquoise",
+      "hex": "#0d425a",
+      "rgb": "13,66,90"
+    },
+    {
+      "id": 72,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.898",
+      "name": "Dark Sea Blue",
+      "hex": "#262c38",
+      "rgb": "38,44,56"
+    },
+    {
+      "id": 73,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.754",
+      "name": "Continental Blue",
+      "hex": "#25232a",
+      "rgb": "37,35,42"
+    },
+    {
+      "id": 74,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.755",
+      "name": "Light Emerald",
+      "hex": "#007b72",
+      "rgb": "0,123,114"
+    },
+    {
+      "id": 75,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.838",
+      "name": "Emerald",
+      "hex": "#006149",
+      "rgb": "0,97,73"
+    },
+    {
+      "id": 76,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.974",
+      "name": "Green Sky",
+      "hex": "#789064",
+      "rgb": "120,144,100"
+    },
+    {
+      "id": 77,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.756",
+      "name": "Splinter Green",
+      "hex": "#436748",
+      "rgb": "67,103,72"
+    },
+    {
+      "id": 78,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.969",
+      "name": "Park Green Flat",
+      "hex": "#186850",
+      "rgb": "24,104,80"
+    },
+    {
+      "id": 79,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.970",
+      "name": "Deep Green",
+      "hex": "#0f4c30",
+      "rgb": "15,76,48"
+    },
+    {
+      "id": 80,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.980",
+      "name": "Black Green",
+      "hex": "#1e342b",
+      "rgb": "30,52,43"
+    },
+    {
+      "id": 81,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.757",
+      "name": "Pacific Green",
+      "hex": "#576f63",
+      "rgb": "87,111,99"
+    },
+    {
+      "id": 82,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.895",
+      "name": "Gunship Green",
+      "hex": "#4b5740",
+      "rgb": "75,87,64"
+    },
+    {
+      "id": 83,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.920",
+      "name": "German Uniform",
+      "hex": "#434e42",
+      "rgb": "67,78,66"
+    },
+    {
+      "id": 84,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.897",
+      "name": "Bronze Green",
+      "hex": "#313a28",
+      "rgb": "49,58,40"
+    },
+    {
+      "id": 85,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.758",
+      "name": "Bright Green",
+      "hex": "#6e8249",
+      "rgb": "110,130,73"
+    },
+    {
+      "id": 86,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.891",
+      "name": "Intermediate Green",
+      "hex": "#506642",
+      "rgb": "80,102,66"
+    },
+    {
+      "id": 87,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.833",
+      "name": "Fern Green",
+      "hex": "#445633",
+      "rgb": "68,86,51"
+    },
+    {
+      "id": 88,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.968",
+      "name": "Flat Green",
+      "hex": "#354b2c",
+      "rgb": "53,75,44"
+    },
+    {
+      "id": 89,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.979",
+      "name": "Camouflage Dark Green",
+      "hex": "#253022",
+      "rgb": "37,48,34"
+    },
+    {
+      "id": 90,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.954",
+      "name": "Yellow Green",
+      "hex": "#dddd25",
+      "rgb": "221,221,37"
+    },
+    {
+      "id": 91,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.827",
+      "name": "Lime Green",
+      "hex": "#7c9334",
+      "rgb": "124,147,52"
+    },
+    {
+      "id": 92,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.967",
+      "name": "Olive Green",
+      "hex": "#4f6237",
+      "rgb": "79,98,55"
+    },
+    {
+      "id": 93,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.922",
+      "name": "Uniform Green",
+      "hex": "#48542e",
+      "rgb": "72,84,46"
+    },
+    {
+      "id": 94,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.850",
+      "name": "Medium Olive",
+      "hex": "#3f4d30",
+      "rgb": "63,77,48"
+    },
+    {
+      "id": 95,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.823",
+      "name": "Luftwaffe Green",
+      "hex": "#373e24",
+      "rgb": "55,62,36"
+    },
+    {
+      "id": 96,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.975",
+      "name": "Military Green",
+      "hex": "#434233",
+      "rgb": "67,66,51"
+    },
+    {
+      "id": 97,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.885",
+      "name": "Pastel Green",
+      "hex": "#94966e",
+      "rgb": "148,150,110"
+    },
+    {
+      "id": 98,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.886",
+      "name": "Green Grey",
+      "hex": "#64624e",
+      "rgb": "100,98,78"
+    },
+    {
+      "id": 99,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.830",
+      "name": "German Fieldgrey WWII",
+      "hex": "#565139",
+      "rgb": "86,81,57"
+    },
+    {
+      "id": 100,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.759",
+      "name": "German Tank Crew",
+      "hex": "#524a3d",
+      "rgb": "82,74,61"
+    },
+    {
+      "id": 101,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.892",
+      "name": "Yellow Olive",
+      "hex": "#373a30",
+      "rgb": "55,58,48"
+    },
+    {
+      "id": 102,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.896",
+      "name": "Extra Dark Green",
+      "hex": "#2a2914",
+      "rgb": "42,41,20"
+    },
+    {
+      "id": 103,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.760",
+      "name": "Light Mud",
+      "hex": "#79755a",
+      "rgb": "121,117,90"
+    },
+    {
+      "id": 104,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.924",
+      "name": "Russian Uniform WWII",
+      "hex": "#545235",
+      "rgb": "84,82,53"
+    },
+    {
+      "id": 105,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.893",
+      "name": "US Dark Green",
+      "hex": "#4a4937",
+      "rgb": "74,73,55"
+    },
+    {
+      "id": 106,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.890",
+      "name": "Refractive Green",
+      "hex": "#454833",
+      "rgb": "69,72,51"
+    },
+    {
+      "id": 107,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.888",
+      "name": "Olive Grey",
+      "hex": "#41402c",
+      "rgb": "65,64,44"
+    },
+    {
+      "id": 108,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.894",
+      "name": "Camouflage Olive Green",
+      "hex": "#3c3b2e",
+      "rgb": "60,59,46"
+    },
+    {
+      "id": 109,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.741",
+      "name": "Camouflage Black Green",
+      "hex": "#312f28",
+      "rgb": "49,47,40"
+    },
+    {
+      "id": 110,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.986",
+      "name": "Deck Tan",
+      "hex": "#a9a28f",
+      "rgb": "169,162,143"
+    },
+    {
+      "id": 111,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.884",
+      "name": "Stone Grey",
+      "hex": "#897c63",
+      "rgb": "137,124,99"
+    },
+    {
+      "id": 112,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.987",
+      "name": "Medium Grey",
+      "hex": "#857258",
+      "rgb": "133,114,88"
+    },
+    {
+      "id": 113,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.821",
+      "name": "German Beige WWII",
+      "hex": "#776950",
+      "rgb": "119,105,80"
+    },
+    {
+      "id": 114,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.988",
+      "name": "Khaki",
+      "hex": "#786438",
+      "rgb": "120,100,56"
+    },
+    {
+      "id": 115,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.762",
+      "name": "Grey Brown",
+      "hex": "#5b4922",
+      "rgb": "91,73,34"
+    },
+    {
+      "id": 116,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.763",
+      "name": "Canvas",
+      "hex": "#4b3e1e",
+      "rgb": "75,62,30"
+    },
+    {
+      "id": 117,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.740",
+      "name": "Camouflage Middle Brown",
+      "hex": "#503e20",
+      "rgb": "80,62,32"
+    },
+    {
+      "id": 118,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.941",
+      "name": "Burnt Umber",
+      "hex": "#503a30",
+      "rgb": "80,58,48"
+    },
+    {
+      "id": 119,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.806",
+      "name": "German Yellow",
+      "hex": "#cdb65e",
+      "rgb": "205,182,94"
+    },
+    {
+      "id": 120,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.978",
+      "name": "Dark Yellow",
+      "hex": "#908739",
+      "rgb": "144,135,57"
+    },
+    {
+      "id": 121,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.881",
+      "name": "Green Yellow",
+      "hex": "#6e653c",
+      "rgb": "110,101,60"
+    },
+    {
+      "id": 122,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.887",
+      "name": "US Olive Drab",
+      "hex": "#57513b",
+      "rgb": "87,81,59"
+    },
+    {
+      "id": 123,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.976",
+      "name": "Buff",
+      "hex": "#d5b04d",
+      "rgb": "213,176,77"
+    },
+    {
+      "id": 124,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.882",
+      "name": "Middle Stone",
+      "hex": "#927e40",
+      "rgb": "146,126,64"
+    },
+    {
+      "id": 125,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.764",
+      "name": "Military Yellow",
+      "hex": "#927625",
+      "rgb": "146,118,37"
+    },
+    {
+      "id": 126,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.923",
+      "name": "Japanese Uniform WWII",
+      "hex": "#9e8029",
+      "rgb": "158,128,41"
+    },
+    {
+      "id": 127,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.879",
+      "name": "Green Brown",
+      "hex": "#816c30",
+      "rgb": "129,108,48"
+    },
+    {
+      "id": 128,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.921",
+      "name": "English Uniform",
+      "hex": "#6f532b",
+      "rgb": "111,83,43"
+    },
+    {
+      "id": 129,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.826",
+      "name": "Medium Brown",
+      "hex": "#5b463b",
+      "rgb": "91,70,59"
+    },
+    {
+      "id": 130,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.889",
+      "name": "Olive Brown",
+      "hex": "#3f3127",
+      "rgb": "63,49,39"
+    },
+    {
+      "id": 131,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.917",
+      "name": "Beige",
+      "hex": "#e0bd6d",
+      "rgb": "224,189,109"
+    },
+    {
+      "id": 132,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.914",
+      "name": "Green Ochre",
+      "hex": "#a07e36",
+      "rgb": "160,126,54"
+    },
+    {
+      "id": 133,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.824",
+      "name": "Orange Ochre",
+      "hex": "#aa8136",
+      "rgb": "170,129,54"
+    },
+    {
+      "id": 134,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.880",
+      "name": "Khaki Grey",
+      "hex": "#7c6238",
+      "rgb": "124,98,56"
+    },
+    {
+      "id": 135,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.872",
+      "name": "Chocolate Brown",
+      "hex": "#604e44",
+      "rgb": "96,78,68"
+    },
+    {
+      "id": 136,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.847",
+      "name": "Dark Sand",
+      "hex": "#caa665",
+      "rgb": "202,166,101"
+    },
+    {
+      "id": 137,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.819",
+      "name": "Iraqi Sand",
+      "hex": "#b4925d",
+      "rgb": "180,146,93"
+    },
+    {
+      "id": 138,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.767",
+      "name": "Desert Brown",
+      "hex": "#ac8354",
+      "rgb": "172,131,84"
+    },
+    {
+      "id": 139,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.761",
+      "name": "Old Wood",
+      "hex": "#816c53",
+      "rgb": "129,108,83"
+    },
+    {
+      "id": 140,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.765",
+      "name": "Desert Tan",
+      "hex": "#b5a286",
+      "rgb": "181,162,134"
+    },
+    {
+      "id": 141,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.874",
+      "name": "Tan Earth",
+      "hex": "#977557",
+      "rgb": "151,117,87"
+    },
+    {
+      "id": 142,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.873",
+      "name": "US Field Drab",
+      "hex": "#816644",
+      "rgb": "129,102,68"
+    },
+    {
+      "id": 143,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.768",
+      "name": "BC Dark Brown",
+      "hex": "#75573c",
+      "rgb": "117,87,60"
+    },
+    {
+      "id": 144,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.871",
+      "name": "Leather Brown",
+      "hex": "#584335",
+      "rgb": "88,67,53"
+    },
+    {
+      "id": 145,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.822",
+      "name": "Camouflage Black Brown",
+      "hex": "#413434",
+      "rgb": "65,52,52"
+    },
+    {
+      "id": 146,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.916",
+      "name": "Sand Yellow",
+      "hex": "#eabf54",
+      "rgb": "234,191,84"
+    },
+    {
+      "id": 147,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.977",
+      "name": "Desert Yellow",
+      "hex": "#b48447",
+      "rgb": "180,132,71"
+    },
+    {
+      "id": 148,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.769",
+      "name": "Mustard Brown",
+      "hex": "#9e7249",
+      "rgb": "158,114,73"
+    },
+    {
+      "id": 149,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.770",
+      "name": "New Wood",
+      "hex": "#89603b",
+      "rgb": "137,96,59"
+    },
+    {
+      "id": 150,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.875",
+      "name": "Beige Brown",
+      "hex": "#815f43",
+      "rgb": "129,95,67"
+    },
+    {
+      "id": 151,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.983",
+      "name": "Flat Earth",
+      "hex": "#674428",
+      "rgb": "103,68,40"
+    },
+    {
+      "id": 152,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.825",
+      "name": "Pale Brown",
+      "hex": "#9f8273",
+      "rgb": "159,130,115"
+    },
+    {
+      "id": 153,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.940",
+      "name": "Saddle Brown",
+      "hex": "#8b645b",
+      "rgb": "139,100,91"
+    },
+    {
+      "id": 154,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.846",
+      "name": "Mahogany Brown",
+      "hex": "#784d47",
+      "rgb": "120,77,71"
+    },
+    {
+      "id": 155,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.984",
+      "name": "Flat Brown",
+      "hex": "#6f4037",
+      "rgb": "111,64,55"
+    },
+    {
+      "id": 156,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.771",
+      "name": "Dark Rust",
+      "hex": "#3c2424",
+      "rgb": "60,36,36"
+    },
+    {
+      "id": 157,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.913",
+      "name": "Yellow Ochre",
+      "hex": "#deaa46",
+      "rgb": "222,170,70"
+    },
+    {
+      "id": 158,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.877",
+      "name": "Gold Brown",
+      "hex": "#be863c",
+      "rgb": "190,134,60"
+    },
+    {
+      "id": 159,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.856",
+      "name": "Ochre Brown",
+      "hex": "#aa793d",
+      "rgb": "170,121,61"
+    },
+    {
+      "id": 160,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.981",
+      "name": "Orange Brown",
+      "hex": "#ac623a",
+      "rgb": "172,98,58"
+    },
+    {
+      "id": 161,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.818",
+      "name": "Red Leather",
+      "hex": "#955338",
+      "rgb": "149,83,56"
+    },
+    {
+      "id": 162,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.982",
+      "name": "Cavalry Brown",
+      "hex": "#854337",
+      "rgb": "133,67,55"
+    },
+    {
+      "id": 163,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.814",
+      "name": "Burnt Red",
+      "hex": "#753b3a",
+      "rgb": "117,59,58"
+    },
+    {
+      "id": 164,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.985",
+      "name": "Hull Red",
+      "hex": "#5d3837",
+      "rgb": "93,56,55"
+    },
+    {
+      "id": 165,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.993",
+      "name": "White Grey",
+      "hex": "#e4dfde",
+      "rgb": "228,223,222"
+    },
+    {
+      "id": 166,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.883",
+      "name": "Silver Grey",
+      "hex": "#d7cfc5",
+      "rgb": "215,207,197"
+    },
+    {
+      "id": 167,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.971",
+      "name": "Green Grey",
+      "hex": "#b4b5ab",
+      "rgb": "180,181,171"
+    },
+    {
+      "id": 168,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.907",
+      "name": "Pale Grey Blue",
+      "hex": "#a7b4b4",
+      "rgb": "167,180,180"
+    },
+    {
+      "id": 169,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.906",
+      "name": "Pale Blue",
+      "hex": "#8fa2a6",
+      "rgb": "143,162,166"
+    },
+    {
+      "id": 170,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.972",
+      "name": "Light Green Blue",
+      "hex": "#86958d",
+      "rgb": "134,149,141"
+    },
+    {
+      "id": 171,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.772",
+      "name": "Medium Grey Blue",
+      "hex": "#769c93",
+      "rgb": "118,156,147"
+    },
+    {
+      "id": 172,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.943",
+      "name": "Grey Blue",
+      "hex": "#596d84",
+      "rgb": "89,109,132"
+    },
+    {
+      "id": 173,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.964",
+      "name": "Field Blue",
+      "hex": "#4c5257",
+      "rgb": "76,82,87"
+    },
+    {
+      "id": 174,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.816",
+      "name": "Luftwaffe Uniform WWII",
+      "hex": "#44414b",
+      "rgb": "68,65,75"
+    },
+    {
+      "id": 175,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.994",
+      "name": "Dark Grey",
+      "hex": "#312d33",
+      "rgb": "49,45,51"
+    },
+    {
+      "id": 176,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.989",
+      "name": "Sky Grey",
+      "hex": "#a8a9ab",
+      "rgb": "168,169,171"
+    },
+    {
+      "id": 177,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.990",
+      "name": "Light Grey",
+      "hex": "#8e9193",
+      "rgb": "142,145,147"
+    },
+    {
+      "id": 178,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.905",
+      "name": "Blue Grey Pale",
+      "hex": "#808485",
+      "rgb": "128,132,133"
+    },
+    {
+      "id": 179,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.992",
+      "name": "Neutral Grey",
+      "hex": "#60605f",
+      "rgb": "96,96,95"
+    },
+    {
+      "id": 180,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.867",
+      "name": "Dark Blue Grey",
+      "hex": "#424345",
+      "rgb": "66,67,69"
+    },
+    {
+      "id": 181,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.870",
+      "name": "Medium Sea Grey",
+      "hex": "#7c7b7a",
+      "rgb": "124,123,122"
+    },
+    {
+      "id": 182,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.991",
+      "name": "Dark Sea Grey",
+      "hex": "#6b6a69",
+      "rgb": "107,106,105"
+    },
+    {
+      "id": 183,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.773",
+      "name": "Violet Grey",
+      "hex": "#5a5957",
+      "rgb": "90,89,87"
+    },
+    {
+      "id": 184,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.866",
+      "name": "Grey Green",
+      "hex": "#423e3d",
+      "rgb": "66,62,61"
+    },
+    {
+      "id": 185,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.862",
+      "name": "Black Grey",
+      "hex": "#2f2621",
+      "rgb": "47,38,33"
+    },
+    {
+      "id": 186,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.836",
+      "name": "London Grey",
+      "hex": "#686261",
+      "rgb": "104,98,97"
+    },
+    {
+      "id": 187,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.869",
+      "name": "Basalt Grey",
+      "hex": "#5b585c",
+      "rgb": "91,88,92"
+    },
+    {
+      "id": 188,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.868",
+      "name": "Dark Sea Green",
+      "hex": "#4a4445",
+      "rgb": "74,68,69"
+    },
+    {
+      "id": 189,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.995",
+      "name": "German Grey",
+      "hex": "#2d2d2b",
+      "rgb": "45,45,43"
+    },
+    {
+      "id": 190,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.774",
+      "name": "Lavender Grey",
+      "hex": "#7e6e6e",
+      "rgb": "126,110,110"
+    },
+    {
+      "id": 191,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.950",
+      "name": "Black",
+      "hex": "#221c1c",
+      "rgb": "34,28,28"
+    },
+    {
+      "id": 192,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.861",
+      "name": "Glossy Black",
+      "hex": "#241d1f",
+      "rgb": "36,29,31"
+    },
+    {
+      "id": 193,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.828",
+      "name": "Mahogany Ink",
+      "hex": "#664540",
+      "rgb": "102,69,64"
+    },
+    {
+      "id": 194,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.939",
+      "name": "Smoke Ink",
+      "hex": "#5c4844",
+      "rgb": "92,72,68"
+    },
+    {
+      "id": 195,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.997",
+      "name": "Silver",
+      "hex": "#8b8f8f",
+      "rgb": "139,143,143"
+    },
+    {
+      "id": 196,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.865",
+      "name": "Oily Steel",
+      "hex": "#444348",
+      "rgb": "68,67,72"
+    },
+    {
+      "id": 197,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.864",
+      "name": "Natural Steel",
+      "hex": "#51565d",
+      "rgb": "81,86,93"
+    },
+    {
+      "id": 198,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.863",
+      "name": "Gunmetal",
+      "hex": "#28252c",
+      "rgb": "40,37,44"
+    },
+    {
+      "id": 199,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.996",
+      "name": "Gold",
+      "hex": "#926b35",
+      "rgb": "146,107,53"
+    },
+    {
+      "id": 200,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.878",
+      "name": "Old Gold",
+      "hex": "#4d361f",
+      "rgb": "77,54,31"
+    },
+    {
+      "id": 201,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.998",
+      "name": "Bronze",
+      "hex": "#4c3a21",
+      "rgb": "76,58,33"
+    },
+    {
+      "id": 202,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.801",
+      "name": "Brass",
+      "hex": "#5f3c22",
+      "rgb": "95,60,34"
+    },
+    {
+      "id": 203,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.999",
+      "name": "Copper",
+      "hex": "#7a382e",
+      "rgb": "122,56,46"
+    },
+    {
+      "id": 204,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.800",
+      "name": "Gunmetal Blue",
+      "hex": "#1a2230",
+      "rgb": "26,34,48"
+    },
+    {
+      "id": 205,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.790",
+      "name": "Silver (liquid metal)",
+      "hex": "#d4dadf",
+      "rgb": "212,218,223"
+    },
+    {
+      "id": 206,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.791",
+      "name": "Gold (liquid metal)",
+      "hex": "#b4a088",
+      "rgb": "180,160,136"
+    },
+    {
+      "id": 207,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.792",
+      "name": "Old Gold (liquid metal)",
+      "hex": "#c6b31c",
+      "rgb": "198,179,28"
+    },
+    {
+      "id": 208,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.793",
+      "name": "Rich Gold (liquid metal)",
+      "hex": "#ac8427",
+      "rgb": "172,132,39"
+    },
+    {
+      "id": 209,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.794",
+      "name": "Red Gold (liquid metal)",
+      "hex": "#cb9011",
+      "rgb": "203,144,17"
+    },
+    {
+      "id": 210,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.795",
+      "name": "Green Gold (liquid metal)",
+      "hex": "#8e7528",
+      "rgb": "142,117,40"
+    },
+    {
+      "id": 211,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.796",
+      "name": "White Gold (liquid metal)",
+      "hex": "#dfe0e2",
+      "rgb": "223,224,226"
+    },
+    {
+      "id": 212,
+      "brand": "vallejo",
+      "line": "Model Color",
+      "code": "70.797",
+      "name": "Copper (liquid metal)",
+      "hex": "#9d4523",
+      "rgb": "157,69,35"
+    },
+    {
+      "id": 213,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.001",
+      "name": "White",
+      "hex": "#f9faf8",
+      "rgb": "249,250,248"
+    },
+    {
+      "id": 214,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.002",
+      "name": "Medium Yellow",
+      "hex": "#f9b000",
+      "rgb": "249,176,0"
+    },
+    {
+      "id": 215,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.003",
+      "name": "Red RLM23",
+      "hex": "#c72417",
+      "rgb": "199,36,23"
+    },
+    {
+      "id": 216,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.004",
+      "name": "Blue",
+      "hex": "#344167",
+      "rgb": "52,65,103"
+    },
+    {
+      "id": 217,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.005",
+      "name": "Grey Blue",
+      "hex": "#464b58",
+      "rgb": "70,75,88"
+    },
+    {
+      "id": 218,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.006",
+      "name": "Light Green Chromate",
+      "hex": "#5f6844",
+      "rgb": "95,104,68"
+    },
+    {
+      "id": 219,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.007",
+      "name": "Olive Green",
+      "hex": "#363a39",
+      "rgb": "54,58,57"
+    },
+    {
+      "id": 220,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.008",
+      "name": "Pale Blue",
+      "hex": "#759499",
+      "rgb": "117,148,153"
+    },
+    {
+      "id": 221,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.009",
+      "name": "Eau de Nil (Duck Egg Green)",
+      "hex": "#aab980",
+      "rgb": "170,185,128"
+    },
+    {
+      "id": 222,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.010",
+      "name": "Interior Green",
+      "hex": "#675f41",
+      "rgb": "103,95,65"
+    },
+    {
+      "id": 223,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.011",
+      "name": "Dark Green RLM83",
+      "hex": "#515046",
+      "rgb": "81,80,70"
+    },
+    {
+      "id": 224,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.012",
+      "name": "Dark Green",
+      "hex": "#575642",
+      "rgb": "87,86,66"
+    },
+    {
+      "id": 225,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.013",
+      "name": "Yellow Olive",
+      "hex": "#464743",
+      "rgb": "70,71,67"
+    },
+    {
+      "id": 226,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.014",
+      "name": "Gunship Green",
+      "hex": "#4c5846",
+      "rgb": "76,88,70"
+    },
+    {
+      "id": 227,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.015",
+      "name": "Dark Green RLM71",
+      "hex": "#50492f",
+      "rgb": "80,73,47"
+    },
+    {
+      "id": 228,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.016",
+      "name": "USAF Olive Drab",
+      "hex": "#655d49",
+      "rgb": "101,93,73"
+    },
+    {
+      "id": 229,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.017",
+      "name": "Russian Green 4BO",
+      "hex": "#565444",
+      "rgb": "86,84,68"
+    },
+    {
+      "id": 230,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.018",
+      "name": "Black Green",
+      "hex": "#484e50",
+      "rgb": "72,78,80"
+    },
+    {
+      "id": 231,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.019",
+      "name": "Camouflage Dark Green",
+      "hex": "#4e504a",
+      "rgb": "78,80,74"
+    },
+    {
+      "id": 232,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.020",
+      "name": "Green Brown",
+      "hex": "#4d4c42",
+      "rgb": "77,76,66"
+    },
+    {
+      "id": 233,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.021",
+      "name": "Black Green RLM70",
+      "hex": "#444b47",
+      "rgb": "68,75,71"
+    },
+    {
+      "id": 234,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.022",
+      "name": "Light Green RLM82",
+      "hex": "#4c5140",
+      "rgb": "76,81,64"
+    },
+    {
+      "id": 235,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.023",
+      "name": "Hemp",
+      "hex": "#847a5c",
+      "rgb": "132,122,92"
+    },
+    {
+      "id": 236,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.024",
+      "name": "Khaki Brown",
+      "hex": "#92795b",
+      "rgb": "146,121,91"
+    },
+    {
+      "id": 237,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.025",
+      "name": "Dark Yellow",
+      "hex": "#967a48",
+      "rgb": "150,122,72"
+    },
+    {
+      "id": 238,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.026",
+      "name": "US Flat Brown",
+      "hex": "#896747",
+      "rgb": "137,103,71"
+    },
+    {
+      "id": 239,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.027",
+      "name": "Light Brown",
+      "hex": "#b19168",
+      "rgb": "177,145,104"
+    },
+    {
+      "id": 240,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.028",
+      "name": "Sand Yellow",
+      "hex": "#a38c71",
+      "rgb": "163,140,113"
+    },
+    {
+      "id": 241,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.029",
+      "name": "Dark Earth",
+      "hex": "#615544",
+      "rgb": "97,85,68"
+    },
+    {
+      "id": 242,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.030",
+      "name": "Brown Green",
+      "hex": "#916f49",
+      "rgb": "145,111,73"
+    },
+    {
+      "id": 243,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.031",
+      "name": "Middle Stone",
+      "hex": "#997d50",
+      "rgb": "153,125,80"
+    },
+    {
+      "id": 244,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.032",
+      "name": "Golden Brown",
+      "hex": "#866440",
+      "rgb": "134,100,64"
+    },
+    {
+      "id": 245,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.033",
+      "name": "Yellow Ochre",
+      "hex": "#d9912e",
+      "rgb": "217,145,46"
+    },
+    {
+      "id": 246,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.034",
+      "name": "Sand Brown",
+      "hex": "#966a54",
+      "rgb": "150,106,84"
+    },
+    {
+      "id": 247,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.035",
+      "name": "Camouflage Pale Brown",
+      "hex": "#6f5847",
+      "rgb": "111,88,71"
+    },
+    {
+      "id": 248,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.036",
+      "name": "Mahogany",
+      "hex": "#4d3d36",
+      "rgb": "77,61,54"
+    },
+    {
+      "id": 249,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.037",
+      "name": "Mud Brown",
+      "hex": "#8d654b",
+      "rgb": "141,101,75"
+    },
+    {
+      "id": 250,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.038",
+      "name": "Camouflage Medium Brown",
+      "hex": "#625041",
+      "rgb": "98,80,65"
+    },
+    {
+      "id": 251,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.039",
+      "name": "Hull Red",
+      "hex": "#473631",
+      "rgb": "71,54,49"
+    },
+    {
+      "id": 252,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.040",
+      "name": "Burnt Umber",
+      "hex": "#3f322b",
+      "rgb": "63,50,43"
+    },
+    {
+      "id": 253,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.041",
+      "name": "Armour Brown",
+      "hex": "#443b38",
+      "rgb": "68,59,56"
+    },
+    {
+      "id": 254,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.042",
+      "name": "Dark Brown RLM61",
+      "hex": "#4a3f39",
+      "rgb": "74,63,57"
+    },
+    {
+      "id": 255,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.043",
+      "name": "US Olive Drab",
+      "hex": "#5c5246",
+      "rgb": "92,82,70"
+    },
+    {
+      "id": 256,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.044",
+      "name": "Grey RLM02",
+      "hex": "#767462",
+      "rgb": "118,116,98"
+    },
+    {
+      "id": 257,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.045",
+      "name": "Cement Grey",
+      "hex": "#909482",
+      "rgb": "144,148,130"
+    },
+    {
+      "id": 258,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.046",
+      "name": "Pale Blue Grey",
+      "hex": "#969c9f",
+      "rgb": "150,156,159"
+    },
+    {
+      "id": 259,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.047",
+      "name": "Grey",
+      "hex": "#575a61",
+      "rgb": "87,90,97"
+    },
+    {
+      "id": 260,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.048",
+      "name": "Engine Gray",
+      "hex": "#535b66",
+      "rgb": "83,91,102"
+    },
+    {
+      "id": 261,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.049",
+      "name": "Sea Grey",
+      "hex": "#656971",
+      "rgb": "101,105,113"
+    },
+    {
+      "id": 262,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.050",
+      "name": "Light Gray",
+      "hex": "#8d9297",
+      "rgb": "141,146,151"
+    },
+    {
+      "id": 263,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.051",
+      "name": "Neutral Gray",
+      "hex": "#71787d",
+      "rgb": "113,120,125"
+    },
+    {
+      "id": 264,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.052",
+      "name": "Anthracite Grey",
+      "hex": "#505254",
+      "rgb": "80,82,84"
+    },
+    {
+      "id": 265,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.053",
+      "name": "Dark Sea Gray",
+      "hex": "#51565b",
+      "rgb": "81,86,91"
+    },
+    {
+      "id": 266,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.054",
+      "name": "Dark Grey Blue",
+      "hex": "#4b4d55",
+      "rgb": "75,77,85"
+    },
+    {
+      "id": 267,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.055",
+      "name": "Black Grey RLM66",
+      "hex": "#505556",
+      "rgb": "80,85,86"
+    },
+    {
+      "id": 268,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.056",
+      "name": "Panzer Dark Gray",
+      "hex": "#464749",
+      "rgb": "70,71,73"
+    },
+    {
+      "id": 269,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.057",
+      "name": "Black",
+      "hex": "#313031",
+      "rgb": "49,48,49"
+    },
+    {
+      "id": 270,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.062",
+      "name": "Aluminum (Metallic)",
+      "hex": "#adafba",
+      "rgb": "173,175,186"
+    },
+    {
+      "id": 271,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.063",
+      "name": "Silver RLM01 (Metallic)",
+      "hex": "#aeafbd",
+      "rgb": "174,175,189"
+    },
+    {
+      "id": 272,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.064",
+      "name": "Chrome (Metallic)",
+      "hex": "#abaab7",
+      "rgb": "171,170,183"
+    },
+    {
+      "id": 273,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.065",
+      "name": "Steel (Metallic)",
+      "hex": "#bebecd",
+      "rgb": "190,190,205"
+    },
+    {
+      "id": 274,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.066",
+      "name": "Gold (Metallic)",
+      "hex": "#a0845b",
+      "rgb": "160,132,91"
+    },
+    {
+      "id": 275,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.067",
+      "name": "Bright Brass (Metallic)",
+      "hex": "#a39061",
+      "rgb": "163,144,97"
+    },
+    {
+      "id": 276,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.068",
+      "name": "Copper (Metallic)",
+      "hex": "#8f5f4e",
+      "rgb": "143,95,78"
+    },
+    {
+      "id": 277,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.069",
+      "name": "Rust (Metallic)",
+      "hex": "#785747",
+      "rgb": "120,87,71"
+    },
+    {
+      "id": 278,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.070",
+      "name": "Signal Red (Metallic)",
+      "hex": "#cd5c74",
+      "rgb": "205,92,116"
+    },
+    {
+      "id": 279,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.071",
+      "name": "Arctic Blue (Metallic)",
+      "hex": "#404053",
+      "rgb": "64,64,83"
+    },
+    {
+      "id": 280,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.072",
+      "name": "Gunmetal (Metallic)",
+      "hex": "#807f87",
+      "rgb": "128,127,135"
+    },
+    {
+      "id": 281,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.073",
+      "name": "Black (Metallic)",
+      "hex": "#696472",
+      "rgb": "105,100,114"
+    },
+    {
+      "id": 282,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.074",
+      "name": "Beige",
+      "hex": "#e6c47f",
+      "rgb": "230,196,127"
+    },
+    {
+      "id": 283,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.075",
+      "name": "Ivory",
+      "hex": "#c0ae89",
+      "rgb": "192,174,137"
+    },
+    {
+      "id": 284,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.076",
+      "name": "Skin Tone",
+      "hex": "#f8c390",
+      "rgb": "248,195,144"
+    },
+    {
+      "id": 285,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.077",
+      "name": "Wood",
+      "hex": "#a8733a",
+      "rgb": "168,115,58"
+    },
+    {
+      "id": 286,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.078",
+      "name": "Yellow RLM04",
+      "hex": "#e89f22",
+      "rgb": "232,159,34"
+    },
+    {
+      "id": 287,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.079",
+      "name": "Tan Earth",
+      "hex": "#a7806c",
+      "rgb": "167,128,108"
+    },
+    {
+      "id": 288,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.080",
+      "name": "Rust",
+      "hex": "#75564f",
+      "rgb": "117,86,79"
+    },
+    {
+      "id": 289,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.081",
+      "name": "Ochre",
+      "hex": "#796a3b",
+      "rgb": "121,106,59"
+    },
+    {
+      "id": 290,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.082",
+      "name": "Fluorescent Red",
+      "hex": "#eb5f4d",
+      "rgb": "235,95,77"
+    },
+    {
+      "id": 291,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.083",
+      "name": "Orange",
+      "hex": "#e3481f",
+      "rgb": "227,72,31"
+    },
+    {
+      "id": 292,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.084",
+      "name": "Fire Red",
+      "hex": "#863e30",
+      "rgb": "134,62,48"
+    },
+    {
+      "id": 293,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.085",
+      "name": "Ferrari Red",
+      "hex": "#ae362b",
+      "rgb": "174,54,43"
+    },
+    {
+      "id": 294,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.086",
+      "name": "Light Red",
+      "hex": "#e1431e",
+      "rgb": "225,67,30"
+    },
+    {
+      "id": 295,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.087",
+      "name": "Steel Blue",
+      "hex": "#1c3f54",
+      "rgb": "28,63,84"
+    },
+    {
+      "id": 296,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.088",
+      "name": "French Blue",
+      "hex": "#2a446f",
+      "rgb": "42,68,111"
+    },
+    {
+      "id": 297,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.089",
+      "name": "Light Sea Blue",
+      "hex": "#00a3d7",
+      "rgb": "0,163,215"
+    },
+    {
+      "id": 298,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.090",
+      "name": "Deep Sky",
+      "hex": "#263955",
+      "rgb": "38,57,85"
+    },
+    {
+      "id": 299,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.091",
+      "name": "Signal Blue",
+      "hex": "#293340",
+      "rgb": "41,51,64"
+    },
+    {
+      "id": 300,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.092",
+      "name": "RAL6003 Medium Olive",
+      "hex": "#535545",
+      "rgb": "83,85,69"
+    },
+    {
+      "id": 301,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.093",
+      "name": "NATO Green",
+      "hex": "#545a4f",
+      "rgb": "84,90,79"
+    },
+    {
+      "id": 302,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.094",
+      "name": "Green Zinc Chromate",
+      "hex": "#57613c",
+      "rgb": "87,97,60"
+    },
+    {
+      "id": 303,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.095",
+      "name": "Pale Green",
+      "hex": "#718354",
+      "rgb": "113,131,84"
+    },
+    {
+      "id": 304,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.096",
+      "name": "Olive Grey",
+      "hex": "#616757",
+      "rgb": "97,103,87"
+    },
+    {
+      "id": 305,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.097",
+      "name": "Medium Gunship Gray",
+      "hex": "#5c5f67",
+      "rgb": "92,95,103"
+    },
+    {
+      "id": 306,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.101",
+      "name": "Light Blue RLM78",
+      "hex": "#809595",
+      "rgb": "128,149,149"
+    },
+    {
+      "id": 307,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.102",
+      "name": "Red",
+      "hex": "#b22c31",
+      "rgb": "178,44,49"
+    },
+    {
+      "id": 308,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.103",
+      "name": "Gray Blue RLM84",
+      "hex": "#a1a39a",
+      "rgb": "161,163,154"
+    },
+    {
+      "id": 309,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.104",
+      "name": "Green RLM62",
+      "hex": "#5c5f45",
+      "rgb": "92,95,69"
+    },
+    {
+      "id": 310,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.105",
+      "name": "Brown RLM26",
+      "hex": "#874237",
+      "rgb": "135,66,55"
+    },
+    {
+      "id": 311,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.106",
+      "name": "Ivory RLM05",
+      "hex": "#c6b36b",
+      "rgb": "198,179,107"
+    },
+    {
+      "id": 312,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.107",
+      "name": "US Interior Yellow",
+      "hex": "#cba453",
+      "rgb": "203,164,83"
+    },
+    {
+      "id": 313,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.108",
+      "name": "UK Azure Blue",
+      "hex": "#708caf",
+      "rgb": "112,140,175"
+    },
+    {
+      "id": 314,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.109",
+      "name": "Faded P.R.U. Blue",
+      "hex": "#546e77",
+      "rgb": "84,110,119"
+    },
+    {
+      "id": 315,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.110",
+      "name": "Dark Gray",
+      "hex": "#56595d",
+      "rgb": "86,89,93"
+    },
+    {
+      "id": 316,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.111",
+      "name": "USAF Light Blue",
+      "hex": "#556878",
+      "rgb": "85,104,120"
+    },
+    {
+      "id": 317,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.112",
+      "name": "Sand",
+      "hex": "#9e867b",
+      "rgb": "158,134,123"
+    },
+    {
+      "id": 318,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.113",
+      "name": "IDF Blue",
+      "hex": "#537587",
+      "rgb": "83,117,135"
+    },
+    {
+      "id": 319,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.114",
+      "name": "Medium Gray",
+      "hex": "#6b7e83",
+      "rgb": "107,126,131"
+    },
+    {
+      "id": 320,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.115",
+      "name": "Blue Grey",
+      "hex": "#484b53",
+      "rgb": "72,75,83"
+    },
+    {
+      "id": 321,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.116",
+      "name": "Camouflage Grey Green",
+      "hex": "#7d6b4f",
+      "rgb": "125,107,79"
+    },
+    {
+      "id": 322,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.117",
+      "name": "Camouflage Brown",
+      "hex": "#af8f6f",
+      "rgb": "175,143,111"
+    },
+    {
+      "id": 323,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.118",
+      "name": "Camouflage Grey",
+      "hex": "#877559",
+      "rgb": "135,117,89"
+    },
+    {
+      "id": 324,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.119",
+      "name": "White Grey",
+      "hex": "#d9d7cc",
+      "rgb": "217,215,204"
+    },
+    {
+      "id": 325,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.120",
+      "name": "Dark Ghost Gray",
+      "hex": "#8b969e",
+      "rgb": "139,150,158"
+    },
+    {
+      "id": 326,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.121",
+      "name": "Light Gull Gray",
+      "hex": "#a8aaa5",
+      "rgb": "168,170,165"
+    },
+    {
+      "id": 327,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.122",
+      "name": "US Desert Armour 686",
+      "hex": "#ae9a80",
+      "rgb": "174,154,128"
+    },
+    {
+      "id": 328,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.123",
+      "name": "Dark Grey RLM42",
+      "hex": "#545457",
+      "rgb": "84,84,87"
+    },
+    {
+      "id": 329,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.124",
+      "name": "USAF Green",
+      "hex": "#4f5c5b",
+      "rgb": "79,92,91"
+    },
+    {
+      "id": 330,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.125",
+      "name": "USAF Brown",
+      "hex": "#8b7260",
+      "rgb": "139,114,96"
+    },
+    {
+      "id": 331,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.126",
+      "name": "IDF-IAF Green",
+      "hex": "#778770",
+      "rgb": "119,135,112"
+    },
+    {
+      "id": 332,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.128",
+      "name": "Gray Violet",
+      "hex": "#676460",
+      "rgb": "103,100,96"
+    },
+    {
+      "id": 333,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.129",
+      "name": "Light Rust",
+      "hex": "#905f44",
+      "rgb": "144,95,68"
+    },
+    {
+      "id": 334,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.130",
+      "name": "Orange Rust",
+      "hex": "#c76631",
+      "rgb": "199,102,49"
+    },
+    {
+      "id": 335,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.131",
+      "name": "Concrete",
+      "hex": "#786f64",
+      "rgb": "120,111,100"
+    },
+    {
+      "id": 336,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.132",
+      "name": "Aged White",
+      "hex": "#e4d2b1",
+      "rgb": "228,210,177"
+    },
+    {
+      "id": 337,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.133",
+      "name": "Dirt",
+      "hex": "#7b6241",
+      "rgb": "123,98,65"
+    },
+    {
+      "id": 338,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.134",
+      "name": "IJA Midouri Green",
+      "hex": "#424b3e",
+      "rgb": "66,75,62"
+    },
+    {
+      "id": 339,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.135",
+      "name": "IJA Chrome Yellow",
+      "hex": "#f4a700",
+      "rgb": "244,167,0"
+    },
+    {
+      "id": 340,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.136",
+      "name": "IJA Earth Brown",
+      "hex": "#7b654e",
+      "rgb": "123,101,78"
+    },
+    {
+      "id": 341,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.137",
+      "name": "US Light Green",
+      "hex": "#696642",
+      "rgb": "105,102,66"
+    },
+    {
+      "id": 342,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.138",
+      "name": "US Sand",
+      "hex": "#968669",
+      "rgb": "150,134,105"
+    },
+    {
+      "id": 343,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.139",
+      "name": "US Field Drab",
+      "hex": "#6d5b43",
+      "rgb": "109,91,67"
+    },
+    {
+      "id": 344,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.140",
+      "name": "US Desert Sand",
+      "hex": "#a98d7c",
+      "rgb": "169,141,124"
+    },
+    {
+      "id": 345,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.141",
+      "name": "IDF Sand Grey 73",
+      "hex": "#ab9e86",
+      "rgb": "171,158,134"
+    },
+    {
+      "id": 346,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.142",
+      "name": "IDF Sinai Grey 82",
+      "hex": "#7b7367",
+      "rgb": "123,115,103"
+    },
+    {
+      "id": 347,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.143",
+      "name": "UK Light Stone",
+      "hex": "#b39b69",
+      "rgb": "179,155,105"
+    },
+    {
+      "id": 348,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.244",
+      "name": "Sand Beige",
+      "hex": "#b79f7d",
+      "rgb": "183,159,125"
+    },
+    {
+      "id": 349,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.245",
+      "name": "Loam Beige",
+      "hex": "#978864",
+      "rgb": "151,136,100"
+    },
+    {
+      "id": 350,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.246",
+      "name": "Yellow Brown",
+      "hex": "#978569",
+      "rgb": "151,133,105"
+    },
+    {
+      "id": 351,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.247",
+      "name": "Light Olive",
+      "hex": "#69614a",
+      "rgb": "105,97,74"
+    },
+    {
+      "id": 352,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.248",
+      "name": "Brown Grey",
+      "hex": "#676259",
+      "rgb": "103,98,89"
+    },
+    {
+      "id": 353,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.249",
+      "name": "NATO Brown",
+      "hex": "#5e4f46",
+      "rgb": "94,79,70"
+    },
+    {
+      "id": 354,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.250",
+      "name": "Bronze Green",
+      "hex": "#57584c",
+      "rgb": "87,88,76"
+    },
+    {
+      "id": 355,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.251",
+      "name": "NATO Black",
+      "hex": "#333133",
+      "rgb": "51,49,51"
+    },
+    {
+      "id": 356,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.255",
+      "name": "Light Blue RLM65",
+      "hex": "#899f9b",
+      "rgb": "137,159,155"
+    },
+    {
+      "id": 357,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.256",
+      "name": "Green RLM73",
+      "hex": "#464d47",
+      "rgb": "70,77,71"
+    },
+    {
+      "id": 358,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.257",
+      "name": "Light Blue RLM76",
+      "hex": "#97aaa7",
+      "rgb": "151,170,167"
+    },
+    {
+      "id": 359,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.258",
+      "name": "Grey Green RLM74",
+      "hex": "#535551",
+      "rgb": "83,85,81"
+    },
+    {
+      "id": 360,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.259",
+      "name": "Grey Violet RLM75",
+      "hex": "#646566",
+      "rgb": "100,101,102"
+    },
+    {
+      "id": 361,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.260",
+      "name": "Light Grey RLM63",
+      "hex": "#6c7063",
+      "rgb": "108,112,99"
+    },
+    {
+      "id": 362,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.263",
+      "name": "Green RLM72",
+      "hex": "#464641",
+      "rgb": "70,70,65"
+    },
+    {
+      "id": 363,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.264",
+      "name": "Brown Violet RLM81",
+      "hex": "#675c4c",
+      "rgb": "103,92,76"
+    },
+    {
+      "id": 364,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.265",
+      "name": "Olive Green RLM80",
+      "hex": "#4b5040",
+      "rgb": "75,80,64"
+    },
+    {
+      "id": 365,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.266",
+      "name": "Dark Blue RLM24",
+      "hex": "#364962",
+      "rgb": "54,73,98"
+    },
+    {
+      "id": 366,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.267",
+      "name": "Light Green RLM25",
+      "hex": "#49796d",
+      "rgb": "73,121,109"
+    },
+    {
+      "id": 367,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.268",
+      "name": "German Grey",
+      "hex": "#484a44",
+      "rgb": "72,74,68"
+    },
+    {
+      "id": 368,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.269",
+      "name": "Red",
+      "hex": "#9f3c34",
+      "rgb": "159,60,52"
+    },
+    {
+      "id": 369,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.270",
+      "name": "Off-White",
+      "hex": "#e6d9bd",
+      "rgb": "230,217,189"
+    },
+    {
+      "id": 370,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.271",
+      "name": "German Red Brown",
+      "hex": "#674239",
+      "rgb": "103,66,57"
+    },
+    {
+      "id": 371,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.272",
+      "name": "German Yellow Brown",
+      "hex": "#856f4c",
+      "rgb": "133,111,76"
+    },
+    {
+      "id": 372,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.273",
+      "name": "Ocean Gray",
+      "hex": "#6c7682",
+      "rgb": "108,118,130"
+    },
+    {
+      "id": 373,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.274",
+      "name": "Aggressor Gray",
+      "hex": "#7b7d82",
+      "rgb": "123,125,130"
+    },
+    {
+      "id": 374,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.275",
+      "name": "USAF Medium Gray",
+      "hex": "#83848a",
+      "rgb": "131,132,138"
+    },
+    {
+      "id": 375,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.276",
+      "name": "USAF Light Gray",
+      "hex": "#c1c4c0",
+      "rgb": "193,196,192"
+    },
+    {
+      "id": 376,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.277",
+      "name": "Dark Gull Gray",
+      "hex": "#828282",
+      "rgb": "130,130,130"
+    },
+    {
+      "id": 377,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.278",
+      "name": "Sand Yellow RLM79",
+      "hex": "#967650",
+      "rgb": "150,118,80"
+    },
+    {
+      "id": 378,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.279",
+      "name": "Insignia White",
+      "hex": "#e2e2d4",
+      "rgb": "226,226,212"
+    },
+    {
+      "id": 379,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.280",
+      "name": "Camouflage Gray",
+      "hex": "#6c6c6b",
+      "rgb": "108,108,107"
+    },
+    {
+      "id": 380,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.281",
+      "name": "3B Russian Green",
+      "hex": "#484845",
+      "rgb": "72,72,69"
+    },
+    {
+      "id": 381,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.282",
+      "name": "6K Russian Brown",
+      "hex": "#4c4541",
+      "rgb": "76,69,65"
+    },
+    {
+      "id": 382,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.283",
+      "name": "7K Russian Tan",
+      "hex": "#7b715c",
+      "rgb": "123,113,92"
+    },
+    {
+      "id": 383,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.284",
+      "name": "UK Light Mud",
+      "hex": "#857e70",
+      "rgb": "133,126,112"
+    },
+    {
+      "id": 384,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.285",
+      "name": "IJA Dark Green",
+      "hex": "#565444",
+      "rgb": "86,84,68"
+    },
+    {
+      "id": 385,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.286",
+      "name": "IJA Olive Green",
+      "hex": "#50492f",
+      "rgb": "80,73,47"
+    },
+    {
+      "id": 386,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.287",
+      "name": "IJA Khaki Brown",
+      "hex": "#6d5b43",
+      "rgb": "109,91,67"
+    },
+    {
+      "id": 387,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.288",
+      "name": "UK BSC 64 Portland Stone",
+      "hex": "#cbbd93",
+      "rgb": "203,189,147"
+    },
+    {
+      "id": 388,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.289",
+      "name": "US Dark Green",
+      "hex": "#595947",
+      "rgb": "89,89,71"
+    },
+    {
+      "id": 389,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.290",
+      "name": "US Earth Brown",
+      "hex": "#5f544a",
+      "rgb": "95,84,74"
+    },
+    {
+      "id": 390,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.291",
+      "name": "US Earth Yellow",
+      "hex": "#b98e5e",
+      "rgb": "185,142,94"
+    },
+    {
+      "id": 391,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.292",
+      "name": "US Loam",
+      "hex": "#53554c",
+      "rgb": "83,85,76"
+    },
+    {
+      "id": 392,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.293",
+      "name": "US Earth Red",
+      "hex": "#7d6150",
+      "rgb": "125,97,80"
+    },
+    {
+      "id": 393,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.294",
+      "name": "US Forest Green",
+      "hex": "#555547",
+      "rgb": "85,85,71"
+    },
+    {
+      "id": 394,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.295",
+      "name": "USN Sea Blue",
+      "hex": "#44464d",
+      "rgb": "68,70,77"
+    },
+    {
+      "id": 395,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.296",
+      "name": "USAAF Light Gray",
+      "hex": "#bdbbad",
+      "rgb": "189,187,173"
+    },
+    {
+      "id": 396,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.297",
+      "name": "JGSD Brown 3606",
+      "hex": "#6a6058",
+      "rgb": "106,96,88"
+    },
+    {
+      "id": 397,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.298",
+      "name": "M495 Light Gray",
+      "hex": "#9c9888",
+      "rgb": "156,152,136"
+    },
+    {
+      "id": 398,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.299",
+      "name": "Intermediate Blue",
+      "hex": "#5d6a76",
+      "rgb": "93,106,118"
+    },
+    {
+      "id": 399,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.300",
+      "name": "Glossy Sea Blue",
+      "hex": "#272d34",
+      "rgb": "39,45,52"
+    },
+    {
+      "id": 400,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.301",
+      "name": "AMT-4 Camouflage Green",
+      "hex": "#675f41",
+      "rgb": "103,95,65"
+    },
+    {
+      "id": 401,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.302",
+      "name": "Sky Type S",
+      "hex": "#a1a48f",
+      "rgb": "161,164,143"
+    },
+    {
+      "id": 402,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.303",
+      "name": "A-24M Camouflage Green",
+      "hex": "#595947",
+      "rgb": "89,89,71"
+    },
+    {
+      "id": 403,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.304",
+      "name": "AMT-11 Blue Grey",
+      "hex": "#5c5f67",
+      "rgb": "92,95,103"
+    },
+    {
+      "id": 404,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.305",
+      "name": "Interior Grey Green",
+      "hex": "#96a28d",
+      "rgb": "150,162,141"
+    },
+    {
+      "id": 405,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.306",
+      "name": "Sky Blue",
+      "hex": "#cbd9da",
+      "rgb": "203,217,218"
+    },
+    {
+      "id": 406,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.307",
+      "name": "BS Medium Sea Grey",
+      "hex": "#838a8c",
+      "rgb": "131,138,140"
+    },
+    {
+      "id": 407,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.308",
+      "name": "AMT-12 Dark Grey",
+      "hex": "#464950",
+      "rgb": "70,73,80"
+    },
+    {
+      "id": 408,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.309",
+      "name": "Dark Slate Grey",
+      "hex": "#575642",
+      "rgb": "87,86,66"
+    },
+    {
+      "id": 409,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.310",
+      "name": "IJN Deep Dark Green",
+      "hex": "#374f4e",
+      "rgb": "55,79,78"
+    },
+    {
+      "id": 410,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.311",
+      "name": "IJN Ash Grey",
+      "hex": "#8a826e",
+      "rgb": "138,130,110"
+    },
+    {
+      "id": 411,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.312",
+      "name": "IJN Medium Grey",
+      "hex": "#9c998d",
+      "rgb": "156,153,141"
+    },
+    {
+      "id": 412,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.313",
+      "name": "Dark Mediterranean Blue",
+      "hex": "#29384f",
+      "rgb": "41,56,79"
+    },
+    {
+      "id": 413,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.314",
+      "name": "Seaplane Gray",
+      "hex": "#585757",
+      "rgb": "88,87,87"
+    },
+    {
+      "id": 414,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.315",
+      "name": "Tire Black",
+      "hex": "#454845",
+      "rgb": "69,72,69"
+    },
+    {
+      "id": 415,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.316",
+      "name": "N. 41 Dark Olive Drab",
+      "hex": "#50492f",
+      "rgb": "80,73,47"
+    },
+    {
+      "id": 416,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.317",
+      "name": "AII SV. Gol Light Blue",
+      "hex": "#79c6da",
+      "rgb": "121,198,218"
+    },
+    {
+      "id": 417,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.318",
+      "name": "AMT-7 Greyish Blue",
+      "hex": "#618b9c",
+      "rgb": "97,139,156"
+    },
+    {
+      "id": 418,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.319",
+      "name": "A-28M Greyish Blue",
+      "hex": "#709f98",
+      "rgb": "112,159,152"
+    },
+    {
+      "id": 419,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.320",
+      "name": "AMT-1 Light Grey Brown",
+      "hex": "#958a7d",
+      "rgb": "149,138,125"
+    },
+    {
+      "id": 420,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.321",
+      "name": "IJA Light Grey Green",
+      "hex": "#a4aa95",
+      "rgb": "164,170,149"
+    },
+    {
+      "id": 421,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.322",
+      "name": "IJN Black Green",
+      "hex": "#424b3e",
+      "rgb": "66,75,62"
+    },
+    {
+      "id": 422,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.323",
+      "name": "BS Dark Earth",
+      "hex": "#705c43",
+      "rgb": "112,92,67"
+    },
+    {
+      "id": 423,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.324",
+      "name": "BS Dark Green",
+      "hex": "#474735",
+      "rgb": "71,71,53"
+    },
+    {
+      "id": 424,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.325",
+      "name": "IJN Dark Black Green",
+      "hex": "#464743",
+      "rgb": "70,71,67"
+    },
+    {
+      "id": 425,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.326",
+      "name": "IJA Grey Green",
+      "hex": "#bbb49c",
+      "rgb": "187,180,156"
+    },
+    {
+      "id": 426,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.327",
+      "name": "IAF Sand",
+      "hex": "#bbad97",
+      "rgb": "187,173,151"
+    },
+    {
+      "id": 427,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.328",
+      "name": "Light Blue",
+      "hex": "#c4cbbe",
+      "rgb": "196,203,190"
+    },
+    {
+      "id": 428,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.329",
+      "name": "Green",
+      "hex": "#646c62",
+      "rgb": "100,108,98"
+    },
+    {
+      "id": 429,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.330",
+      "name": "Khaki Green Num.3",
+      "hex": "#584d43",
+      "rgb": "88,77,67"
+    },
+    {
+      "id": 430,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.331",
+      "name": "Cockpit Emerald Green Faded",
+      "hex": "#449785",
+      "rgb": "68,151,133"
+    },
+    {
+      "id": 431,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.332",
+      "name": "Underside Blue Faded",
+      "hex": "#89b0c5",
+      "rgb": "137,176,197"
+    },
+    {
+      "id": 432,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.333",
+      "name": "Russian AF Blue",
+      "hex": "#008eb8",
+      "rgb": "0,142,184"
+    },
+    {
+      "id": 433,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.334",
+      "name": "Flanker Light Blue",
+      "hex": "#b0c8c3",
+      "rgb": "176,200,195"
+    },
+    {
+      "id": 434,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.335",
+      "name": "Flanker Light Gray",
+      "hex": "#9aa6a0",
+      "rgb": "154,166,160"
+    },
+    {
+      "id": 435,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.336",
+      "name": "A-14 Steel Grey",
+      "hex": "#68706e",
+      "rgb": "104,112,110"
+    },
+    {
+      "id": 436,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.337",
+      "name": "Flanker Blue",
+      "hex": "#8faeb7",
+      "rgb": "143,174,183"
+    },
+    {
+      "id": 437,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.338",
+      "name": "Russian AF Grey Blue",
+      "hex": "#9facaa",
+      "rgb": "159,172,170"
+    },
+    {
+      "id": 438,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.339",
+      "name": "Russian AF Grey N.3",
+      "hex": "#888e8c",
+      "rgb": "136,142,140"
+    },
+    {
+      "id": 439,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.340",
+      "name": "Grey Green",
+      "hex": "#787e78",
+      "rgb": "120,126,120"
+    },
+    {
+      "id": 440,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.341",
+      "name": "Green Grey",
+      "hex": "#5a6457",
+      "rgb": "90,100,87"
+    },
+    {
+      "id": 441,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.342",
+      "name": "Russian AF Light Blue",
+      "hex": "#a9c8c4",
+      "rgb": "169,200,196"
+    },
+    {
+      "id": 442,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.343",
+      "name": "Russian AF Grey N.7",
+      "hex": "#6f97af",
+      "rgb": "111,151,175"
+    },
+    {
+      "id": 443,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.344",
+      "name": "Russian AF Grey Protective Coat",
+      "hex": "#b3cdd5",
+      "rgb": "179,205,213"
+    },
+    {
+      "id": 444,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.345",
+      "name": "Russian AF Grey N.8",
+      "hex": "#9fb3c1",
+      "rgb": "159,179,193"
+    },
+    {
+      "id": 445,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.346",
+      "name": "Russian AF Grey N.4",
+      "hex": "#aca894",
+      "rgb": "172,168,148"
+    },
+    {
+      "id": 446,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.347",
+      "name": "Russian AF Dark Green",
+      "hex": "#4d4838",
+      "rgb": "77,72,56"
+    },
+    {
+      "id": 447,
+      "brand": "vallejo",
+      "line": "Model Air",
+      "code": "71.348",
+      "name": "USAF Tan",
+      "hex": "#c0966a",
+      "rgb": "192,150,106"
+    },
+    {
+      "id": 448,
+      "brand": "vallejo",
+      "code": "72.466",
+      "line": "Xpress Color",
+      "name": "Armor Green",
+      "hex": "#1e462b",
+      "rgb": "30,70,43"
+    },
+    {
+      "id": 449,
+      "brand": "vallejo",
+      "code": "72.450",
+      "line": "Xpress Color",
+      "name": "Bag of Bones",
+      "hex": "#c1a16e",
+      "rgb": "193,161,110"
+    },
+    {
+      "id": 450,
+      "brand": "vallejo",
+      "code": "72.473",
+      "line": "Xpress Color",
+      "name": "Battledress Brown",
+      "hex": "#5d4c32",
+      "rgb": "93,76,50"
+    },
+    {
+      "id": 451,
+      "brand": "vallejo",
+      "code": "72.423",
+      "line": "Xpress Color",
+      "name": "Black Lotus",
+      "hex": "#302627",
+      "rgb": "48,38,39"
+    },
+    {
+      "id": 452,
+      "brand": "vallejo",
+      "code": "72.467",
+      "line": "Xpress Color",
+      "name": "Camouflage Green",
+      "hex": "#605d32",
+      "rgb": "96,93,50"
+    },
+    {
+      "id": 453,
+      "brand": "vallejo",
+      "code": "72.408",
+      "line": "Xpress Color",
+      "name": "Cardinal Purple",
+      "hex": "#c81928",
+      "rgb": "200,25,40"
+    },
+    {
+      "id": 454,
+      "brand": "vallejo",
+      "code": "72.414",
+      "line": "Xpress Color",
+      "name": "Caribbean Turquoise",
+      "hex": "#005961",
+      "rgb": "0,89,97"
+    },
+    {
+      "id": 455,
+      "brand": "vallejo",
+      "code": "72.455",
+      "line": "Xpress Color",
+      "name": "Chameleon Orange",
+      "hex": "#ce652e",
+      "rgb": "206,101,46"
+    },
+    {
+      "id": 456,
+      "brand": "vallejo",
+      "code": "72.468",
+      "line": "Xpress Color",
+      "name": "Commando Green",
+      "hex": "#3e4f3c",
+      "rgb": "62,79,60"
+    },
+    {
+      "id": 457,
+      "brand": "vallejo",
+      "code": "72.421",
+      "line": "Xpress Color",
+      "name": "Copper Brown",
+      "hex": "#532c25",
+      "rgb": "83,44,37"
+    },
+    {
+      "id": 458,
+      "brand": "vallejo",
+      "code": "72.409",
+      "line": "Xpress Color",
+      "name": "Deep Purple",
+      "hex": "#6f2b42",
+      "rgb": "111,43,66"
+    },
+    {
+      "id": 459,
+      "brand": "vallejo",
+      "code": "72.458",
+      "line": "Xpress Color",
+      "name": "Demonic Skin",
+      "hex": "#965c58",
+      "rgb": "150,92,88"
+    },
+    {
+      "id": 460,
+      "brand": "vallejo",
+      "code": "72.454",
+      "line": "Xpress Color",
+      "name": "Desert Ochre",
+      "hex": "#9d6729",
+      "rgb": "157,103,41"
+    },
+    {
+      "id": 461,
+      "brand": "vallejo",
+      "code": "72.477",
+      "line": "Xpress Color Intense",
+      "name": "Dreadnought Yellow",
+      "hex": "#d38821",
+      "rgb": "211,136,33"
+    },
+    {
+      "id": 462,
+      "brand": "vallejo",
+      "code": "72.402",
+      "line": "Xpress Color",
+      "name": "Dwarf Skin",
+      "hex": "#833e2f",
+      "rgb": "131,62,47"
+    },
+    {
+      "id": 463,
+      "brand": "vallejo",
+      "code": "72.457",
+      "line": "Xpress Color",
+      "name": "Fairy Skin",
+      "hex": "#ca8774",
+      "rgb": "202,135,116"
+    },
+    {
+      "id": 464,
+      "brand": "vallejo",
+      "code": "72.459",
+      "line": "Xpress Color",
+      "name": "Fluid Pink",
+      "hex": "#c06793",
+      "rgb": "192,103,147"
+    },
+    {
+      "id": 465,
+      "brand": "vallejo",
+      "code": "72.465",
+      "line": "Xpress Color",
+      "name": "Forest Green",
+      "hex": "#11662d",
+      "rgb": "17,102,45"
+    },
+    {
+      "id": 466,
+      "brand": "vallejo",
+      "code": "72.410",
+      "line": "Xpress Color",
+      "name": "Gloomy Violet",
+      "hex": "#402f59",
+      "rgb": "64,47,89"
+    },
+    {
+      "id": 467,
+      "brand": "vallejo",
+      "code": "72.476",
+      "line": "Xpress Color",
+      "name": "Greasy Black",
+      "hex": "#413736",
+      "rgb": "65,55,54"
+    },
+    {
+      "id": 468,
+      "brand": "vallejo",
+      "code": "72.481",
+      "line": "Xpress Color Intense",
+      "name": "Heretic Turquoise",
+      "hex": "#13514b",
+      "rgb": "19,81,75"
+    },
+    {
+      "id": 469,
+      "brand": "vallejo",
+      "code": "72.484",
+      "line": "Xpress Color Intense",
+      "name": "Hospitallier Black",
+      "hex": "#252527",
+      "rgb": "37,37,39"
+    },
+    {
+      "id": 470,
+      "brand": "vallejo",
+      "code": "72.463",
+      "line": "Xpress Color",
+      "name": "Iceberg Grey",
+      "hex": "#42576c",
+      "rgb": "66,87,108"
+    },
+    {
+      "id": 471,
+      "brand": "vallejo",
+      "code": "72.403",
+      "line": "Xpress Color",
+      "name": "Imperial Yellow",
+      "hex": "#f59f2e",
+      "rgb": "245,159,46"
+    },
+    {
+      "id": 472,
+      "brand": "vallejo",
+      "code": "72.451",
+      "line": "Xpress Color",
+      "name": "Khaki Drill",
+      "hex": "#c7945b",
+      "rgb": "199,148,91"
+    },
+    {
+      "id": 473,
+      "brand": "vallejo",
+      "code": "72.469",
+      "line": "Xpress Color",
+      "name": "Landser Grey",
+      "hex": "#524f48",
+      "rgb": "82,79,72"
+    },
+    {
+      "id": 474,
+      "brand": "vallejo",
+      "code": "72.480",
+      "line": "Xpress Color Intense",
+      "name": "Legacy Blue",
+      "hex": "#272961",
+      "rgb": "39,41,97"
+    },
+    {
+      "id": 475,
+      "brand": "vallejo",
+      "code": "72.418",
+      "line": "Xpress Color",
+      "name": "Lizard Green",
+      "hex": "#223a2c",
+      "rgb": "34,58,44"
+    },
+    {
+      "id": 476,
+      "brand": "vallejo",
+      "code": "72.472",
+      "line": "Xpress Color",
+      "name": "Mahogany",
+      "hex": "#5a3930",
+      "rgb": "90,57,48"
+    },
+    {
+      "id": 477,
+      "brand": "vallejo",
+      "code": "72.405",
+      "line": "Xpress Color",
+      "name": "Martian Orange",
+      "hex": "#cd4619",
+      "rgb": "205,70,25"
+    },
+    {
+      "id": 478,
+      "brand": "vallejo",
+      "code": "72.448",
+      "line": "Xpress Color",
+      "name": "Medium Xpress",
+      "hex": "#fffbf8",
+      "rgb": "255,251,248"
+    },
+    {
+      "id": 479,
+      "brand": "vallejo",
+      "code": "72.453",
+      "line": "Xpress Color",
+      "name": "Military Yellow",
+      "hex": "#805e30",
+      "rgb": "128,94,48"
+    },
+    {
+      "id": 480,
+      "brand": "vallejo",
+      "code": "72.482",
+      "line": "Xpress Color Intense",
+      "name": "Monastic Green",
+      "hex": "#004b37",
+      "rgb": "0,75,55"
+    },
+    {
+      "id": 481,
+      "brand": "vallejo",
+      "code": "72.475",
+      "line": "Xpress Color",
+      "name": "Muddy Ground",
+      "hex": "#452e28",
+      "rgb": "69,46,40"
+    },
+    {
+      "id": 482,
+      "brand": "vallejo",
+      "code": "72.449",
+      "line": "Xpress Color",
+      "name": "Mummy White",
+      "hex": "#cfb496",
+      "rgb": "207,180,150"
+    },
+    {
+      "id": 483,
+      "brand": "vallejo",
+      "code": "72.411",
+      "line": "Xpress Color",
+      "name": "Mystic Blue",
+      "hex": "#004a87",
+      "rgb": "0,74,135"
+    },
+    {
+      "id": 484,
+      "brand": "vallejo",
+      "code": "72.404",
+      "line": "Xpress Color",
+      "name": "Nuclear Yellow",
+      "hex": "#dd9213",
+      "rgb": "221,146,19"
+    },
+    {
+      "id": 485,
+      "brand": "vallejo",
+      "code": "72.413",
+      "line": "Xpress Color",
+      "name": "Omega Blue",
+      "hex": "#3a365b",
+      "rgb": "58,54,91"
+    },
+    {
+      "id": 486,
+      "brand": "vallejo",
+      "code": "72.415",
+      "line": "Xpress Color",
+      "name": "Orc Skin",
+      "hex": "#5e752d",
+      "rgb": "94,117,45"
+    },
+    {
+      "id": 487,
+      "brand": "vallejo",
+      "code": "72.478",
+      "line": "Xpress Color Intense",
+      "name": "Phoenix Orange",
+      "hex": "#b1401e",
+      "rgb": "177,64,30"
+    },
+    {
+      "id": 488,
+      "brand": "vallejo",
+      "code": "72.419",
+      "line": "Xpress Color",
+      "name": "Plague Green",
+      "hex": "#4c4d2e",
+      "rgb": "76,77,46"
+    },
+    {
+      "id": 489,
+      "brand": "vallejo",
+      "code": "72.406",
+      "line": "Xpress Color",
+      "name": "Plasma Red",
+      "hex": "#a52822",
+      "rgb": "165,40,34"
+    },
+    {
+      "id": 490,
+      "brand": "vallejo",
+      "code": "72.452",
+      "line": "Xpress Color",
+      "name": "Rotten Flesh",
+      "hex": "#89763b",
+      "rgb": "137,118,59"
+    },
+    {
+      "id": 491,
+      "brand": "vallejo",
+      "code": "72.479",
+      "line": "Xpress Color Intense",
+      "name": "Seraph Red",
+      "hex": "#6b1411",
+      "rgb": "107,20,17"
+    },
+    {
+      "id": 492,
+      "brand": "vallejo",
+      "code": "72.417",
+      "line": "Xpress Color",
+      "name": "Snake Green",
+      "hex": "#015a46",
+      "rgb": "1,90,70"
+    },
+    {
+      "id": 493,
+      "brand": "vallejo",
+      "code": "72.422",
+      "line": "Xpress Color",
+      "name": "Space Grey",
+      "hex": "#2d5a5d",
+      "rgb": "45,90,93"
+    },
+    {
+      "id": 494,
+      "brand": "vallejo",
+      "code": "72.462",
+      "line": "Xpress Color",
+      "name": "Starship Steel",
+      "hex": "#517375",
+      "rgb": "81,115,117"
+    },
+    {
+      "id": 495,
+      "brand": "vallejo",
+      "code": "72.412",
+      "line": "Xpress Color",
+      "name": "Storm Blue",
+      "hex": "#303a7f",
+      "rgb": "48,58,127"
+    },
+    {
+      "id": 496,
+      "brand": "vallejo",
+      "code": "72.471",
+      "line": "Xpress Color",
+      "name": "Tanned Skin",
+      "hex": "#81452d",
+      "rgb": "129,69,45"
+    },
+    {
+      "id": 497,
+      "brand": "vallejo",
+      "code": "72.401",
+      "line": "Xpress Color",
+      "name": "Templar White",
+      "hex": "#cccecd",
+      "rgb": "204,206,205"
+    },
+    {
+      "id": 498,
+      "brand": "vallejo",
+      "code": "72.416",
+      "line": "Xpress Color",
+      "name": "Troll Green",
+      "hex": "#015e32",
+      "rgb": "1,94,50"
+    },
+    {
+      "id": 499,
+      "brand": "vallejo",
+      "code": "72.460",
+      "line": "Xpress Color",
+      "name": "Twilight Rose",
+      "hex": "#774755",
+      "rgb": "119,71,85"
+    },
+    {
+      "id": 500,
+      "brand": "vallejo",
+      "code": "72.461",
+      "line": "Xpress Color",
+      "name": "Vampiric Purple",
+      "hex": "#492857",
+      "rgb": "73,40,87"
+    },
+    {
+      "id": 501,
+      "brand": "vallejo",
+      "code": "72.407",
+      "line": "Xpress Color",
+      "name": "Velvet Red",
+      "hex": "#81282e",
+      "rgb": "129,40,46"
+    },
+    {
+      "id": 502,
+      "brand": "vallejo",
+      "code": "72.483",
+      "line": "Xpress Color Intense",
+      "name": "Viking Grey",
+      "hex": "#45515d",
+      "rgb": "69,81,93"
+    },
+    {
+      "id": 503,
+      "brand": "vallejo",
+      "code": "72.464",
+      "line": "Xpress Color",
+      "name": "Wagram Blue",
+      "hex": "#014461",
+      "rgb": "1,68,97"
+    },
+    {
+      "id": 504,
+      "brand": "vallejo",
+      "code": "72.420",
+      "line": "Xpress Color",
+      "name": "Wasteland Brown",
+      "hex": "#684527",
+      "rgb": "104,69,39"
+    },
+    {
+      "id": 505,
+      "brand": "vallejo",
+      "code": "72.456",
+      "line": "Xpress Color",
+      "name": "Wicked Purple",
+      "hex": "#756566",
+      "rgb": "117,101,102"
+    },
+    {
+      "id": 506,
+      "brand": "vallejo",
+      "code": "72.474",
+      "line": "Xpress Color",
+      "name": "Willow Bark",
+      "hex": "#392b27",
+      "rgb": "57,43,39"
+    },
+    {
+      "id": 507,
+      "brand": "vallejo",
+      "code": "72.470",
+      "line": "Xpress Color",
+      "name": "Zombie Flesh",
+      "hex": "#856b5a",
+      "rgb": "133,107,90"
+    }
+  ]
+}
