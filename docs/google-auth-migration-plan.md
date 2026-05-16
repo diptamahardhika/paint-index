@@ -1,31 +1,65 @@
 # Google Authentication Migration Plan
 
 ## Primary Goal
-Add Google authentication without destroying or overwriting existing browser-local inventories.
+Add Google authentication with cloud-persistent inventories using a simple and maintainable architecture.
+
+## Architectural Decision
+Cloud inventory becomes the authoritative source.
+
+This intentionally replaces local browser inventory after authentication.
+
+Reason:
+- Simpler architecture
+- Lower maintenance burden
+- Less synchronization complexity
+- Easier multi-device support
+- Reduced edge cases
+- Safer long-term scaling
 
 ## Current State
-The application currently stores inventory data in:
+The application currently stores inventory data in browser localStorage:
 
 ```js
 const INVENTORY_STORAGE_KEY = "paint-index.inventory.v1";
 ```
 
-inside browser localStorage.
+## New Model
 
-This means existing users already have persistent inventories locally.
+```text
+Anonymous user
+→ local inventory only
 
-## Migration-Safe Strategy
+Authenticated user
+→ Firestore inventory authoritative
+→ localStorage used as cache only
+```
 
-Do NOT replace localStorage immediately after login.
+## User Experience Strategy
 
-Instead:
+### Anonymous Users
+Anonymous users can still:
+- Browse paints
+- Create local inventory
+- Export inventory
 
-1. Load local inventory first.
-2. Authenticate user.
-3. Check whether remote cloud inventory exists.
-4. Merge inventories safely.
-5. Upload merged result.
-6. Keep local cache enabled.
+But inventory remains device-local only.
+
+### Authentication Warning
+Before Google sign-in:
+
+```text
+Signing in will replace your current local inventory
+with your Google account inventory.
+
+Export your inventory first if needed.
+```
+
+Recommended buttons:
+- Export & Continue
+- Continue
+- Cancel
+
+This intentionally encourages users to authenticate early.
 
 ## Recommended Stack
 
@@ -36,138 +70,120 @@ Instead:
 ### Cloud Storage
 - Firestore
 
-Document structure:
+## Firestore Structure
 
 ```text
 users/{uid}/inventory/default
 ```
 
-## Merge Rules
-
-### First Login
-If remote inventory does not exist:
-- Upload local inventory directly.
-- Preserve all local paints.
-
-### Existing Remote Inventory
-If both local and remote inventories exist:
-- Merge paint items by key.
-- Prefer latest updatedAt timestamp.
-- Never delete local entries automatically.
-
-## Safe Merge Example
-
-```js
-function mergeInventory(localInventory, remoteInventory) {
-  const merged = structuredClone(remoteInventory);
-
-  for (const [key, localItem] of Object.entries(localInventory.items || {})) {
-    const remoteItem = remoteInventory.items?.[key];
-
-    if (!remoteItem) {
-      merged.items[key] = localItem;
-      continue;
-    }
-
-    const localUpdated = new Date(localItem.updatedAt || 0).getTime();
-    const remoteUpdated = new Date(remoteItem.updatedAt || 0).getTime();
-
-    merged.items[key] = localUpdated >= remoteUpdated
-      ? localItem
-      : remoteItem;
-  }
-
-  return merged;
-}
-```
-
-## Required UI Changes
-
-### Add Authentication Area
-Inventory tab should contain:
-
-- Sign in with Google button
-- Signed-in account email/avatar
-- Sync status
-- Sign out button
-
-## Local Cache Policy
-Always keep localStorage enabled.
-
-Reason:
-- Faster startup
-- Offline usability
-- Recovery fallback
-- Prevent accidental data loss
-
-## Sync Flow
+## Authentication Flow
 
 ```text
 App Start
   ↓
-Load local inventory
+Load local inventory cache
   ↓
-Check auth session
+Check Firebase auth session
   ↓
-If signed in:
+If authenticated:
+    Fetch Firestore inventory
+    Replace local inventory state
+    Save cloud inventory into localStorage cache
   ↓
-Fetch cloud inventory
-  ↓
-Merge local + remote
-  ↓
-Render merged inventory
-  ↓
-Persist to localStorage
-  ↓
-Upload merged state to Firestore
+Render app
 ```
 
-## Important Constraint
-The application is currently a fully static frontend.
+## First Login Behavior
 
-Firebase is appropriate because:
-- No custom backend required
-- Works with GitHub Pages/static hosting
-- OAuth handled by Firebase
-- Firestore provides realtime persistence
+### No Cloud Inventory Exists
+Create default empty inventory in Firestore.
 
-## Suggested New Files
+### Cloud Inventory Exists
+Replace local inventory with cloud inventory.
+
+No merge operation occurs.
+
+## Local Cache Policy
+localStorage remains enabled for:
+- Faster startup
+- Reduced Firestore reads
+- Temporary offline cache
+
+But cloud state remains authoritative.
+
+## Required UI Changes
+
+Inventory tab should contain:
+
+- Google sign-in button
+- User avatar/email
+- Cloud sync status
+- Sign out button
+- Local inventory warning banner for anonymous users
+
+## Recommended New Files
 
 ```text
 js/auth.js
 js/cloud-sync.js
 js/firebase-config.js
-```
-
-## Recommended Refactor
-Move inventory state logic from `app.js` into:
-
-```text
 js/inventory-store.js
 ```
 
-This reduces risk before introducing cloud synchronization.
+## Recommended Refactor
+Move inventory logic out of `app.js` before implementing authentication.
+
+Current inventory logic is tightly coupled to rendering.
+
+Authentication and sync logic should remain isolated.
+
+## Suggested Inventory Store Responsibilities
+
+### inventory-store.js
+- load inventory
+- save inventory
+- replace inventory
+- inventory listeners/subscribers
+- local cache handling
+
+### auth.js
+- Firebase initialization
+- Google login/logout
+- auth session listener
+
+### cloud-sync.js
+- fetch cloud inventory
+- upload inventory
+- initialize Firestore inventory
+
+## Important Constraint
+The application is currently a fully static frontend.
+
+Firebase is appropriate because:
+- No backend required
+- Works on GitHub Pages
+- Handles OAuth directly
+- Firestore supports realtime sync
 
 ## Risk Areas
 
-### Highest Risk
-- Overwriting local inventories during first login
-- Race conditions between local save and cloud sync
-- Empty cloud state replacing populated local state
+### Primary Risk
+User signs in after building large local inventory.
 
-### Required Protection
-Cloud inventory must NEVER overwrite a populated local inventory automatically.
+Mitigation:
+- Explicit warning dialog
+- Export inventory option before login
 
 ## Recommended Rollout
 
 ### Phase 1
-- Add Google sign-in only
-- Keep local inventory authoritative
+- Add Firebase Auth
+- Add Google login/logout UI
 
 ### Phase 2
-- Add Firestore sync
-- Enable merge logic
+- Add Firestore persistence
+- Replace local inventory with cloud inventory after login
 
 ### Phase 3
-- Add multi-device synchronization
-- Add sync conflict notifications
+- Add realtime multi-device synchronization
+- Add account settings/profile management
