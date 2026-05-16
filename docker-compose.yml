@@ -7,4 +7,5 @@ services:
       - "8081:80"
     restart: unless-stopped
     volumes:
-      - ./firebase.js:/usr/share/nginx/html/firebase.js:ro
+      - /opt/paint-index/firebase.js:/usr/share/nginx/html/firebase.js:ro
+      
