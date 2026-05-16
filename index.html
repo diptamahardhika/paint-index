@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/app.css?v=1.0.0-beta.3" />
   </head>
   <body>
     <header>
@@ -29,6 +29,7 @@
       <button type="button" class="active" data-tab="browse" role="tab">
         Browse
       </button>
+      <button type="button" data-tab="inventory" role="tab">Inventory</button>
       <button type="button" data-tab="match" role="tab">Cross-reference</button>
       <button type="button" data-tab="hex" role="tab">HEX lab</button>
     </nav>
@@ -53,6 +54,45 @@
         </div>
         <p class="stats" id="browse-stats"></p>
         <div id="browse-grid" class="grid"></div>
+      </section>
+
+      <section id="panel-inventory" class="panel" role="tabpanel">
+        <div class="inventory-header">
+          <div class="profile-card">
+            <label for="inventory-profile-name">Profile</label>
+            <input
+              type="text"
+              id="inventory-profile-name"
+              autocomplete="off"
+              maxlength="48"
+            />
+          </div>
+          <div class="inventory-summary" id="inventory-summary"></div>
+        </div>
+
+        <div class="toolbar">
+          <input
+            type="search"
+            id="inventory-search"
+            placeholder="Search paints to add, or leave blank to view your inventory…"
+            autocomplete="off"
+          />
+          <select id="inventory-status" aria-label="Inventory status filter">
+            <option value="all">Owned & wishlist</option>
+            <option value="owned">Owned</option>
+            <option value="wishlist">Wishlist</option>
+          </select>
+          <select id="inventory-brand" aria-label="Inventory brand filter">
+            <option value="all">All brands</option>
+            <option value="citadel">Citadel Colour</option>
+            <option value="vallejo">Vallejo</option>
+          </select>
+          <button type="button" class="secondary" id="inventory-export">
+            Export JSON
+          </button>
+        </div>
+        <p class="stats" id="inventory-stats"></p>
+        <div id="inventory-grid" class="grid"></div>
       </section>
 
       <section id="panel-match" class="panel" role="tabpanel">
@@ -165,6 +205,6 @@
 
     <div id="toast" class="copied-toast" aria-live="polite">Copied</div>
 
-    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/app.js?v=1.0.0-beta.3"></script>
   </body>
 </html>
