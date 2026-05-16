@@ -27,10 +27,7 @@ export async function loadPaints() {
       hex: c.hex,
       hex2: c.hex2,
       rgb: c.rgb,
-      indexLabel:
-        line === "Contrast"
-          ? `Citadel Contrast · ${c.name}`
-          : `Citadel #${c.id}`,
+      indexLabel: `Citadel #${c.id} · ${line}`,
     }));
   }
 
@@ -73,6 +70,18 @@ export function getBrands() {
 
 export function getByBrand(brand) {
   return byBrand.get(brand) ?? [];
+}
+
+export function getCitadelIndexRange() {
+  const ids = getByBrand("citadel")
+    .map((p) => Number(p.id))
+    .filter(Number.isInteger);
+
+  return {
+    min: ids.length ? Math.min(...ids) : null,
+    max: ids.length ? Math.max(...ids) : null,
+    count: ids.length,
+  };
 }
 
 export function brandLabel(brand) {

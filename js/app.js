@@ -15,6 +15,7 @@ import {
   crossReference,
   closestPaints,
   findById,
+  getCitadelIndexRange,
 } from "./data.js";
 
 const state = {
@@ -243,7 +244,7 @@ function switchTab(id) {
   });
 }
 
-function syncHexFields(hex) {
+function syncHexFields(hex, preferredPaint = null) {
   const n = normalizeHex(hex);
   if (!n) return;
   state.hexSync = false;
@@ -253,15 +254,32 @@ function syncHexFields(hex) {
   $("#rgb-input").value = rgb ? `${rgb.r}, ${rgb.g}, ${rgb.b}` : "";
   $("#hex-preview").style.background = n;
   state.hexSync = true;
-  runLookup(n);
+  runLookup(n, { preferredPaint });
 }
 
 function syncHexFromPaint(p) {
-  syncHexFields(p.hex);
+  syncHexFields(p.hex, p);
   if (p.brand === "citadel") $("#lookup-citadel-id").value = String(p.id);
 }
 
-function runLookup(hex) {
+function updateLookupRange() {
+  const range = getCitadelIndexRange();
+  const input = $("#lookup-citadel-id");
+  const guidance = $("#lookup-guidance");
+
+  if (!range.count) {
+    input.disabled = true;
+    guidance.textContent = "Citadel index lookup is unavailable.";
+    return;
+  }
+
+  input.min = String(range.min);
+  input.max = String(range.max);
+  input.placeholder = `e.g. ${range.max}`;
+  guidance.textContent = `Enter a color or Citadel index # (${range.min}-${range.max}) to find the nearest paints in the library.`;
+}
+
+function runLookup(hex, { preferredPaint = null } = {}) {
   const list = $("#lookup-results");
   const stats = $("#lookup-stats");
   const n = normalizeHex(hex);
@@ -272,10 +290,20 @@ function runLookup(hex) {
   }
   const citadel = closestPaints(n, { limit: 5, brand: "citadel" });
   const vallejo = closestPaints(n, { limit: 5, brand: "vallejo" });
+  const matches = [...citadel.slice(0, 4), ...vallejo.slice(0, 4)];
+  const ranked = preferredPaint
+    ? [
+        { paint: preferredPaint, delta: 0 },
+        ...matches.filter(
+          ({ paint }) =>
+            paint.brand !== preferredPaint.brand || paint.id !== preferredPaint.id
+        ),
+      ]
+    : matches;
   stats.textContent = `Nearest Citadel & Vallejo matches for ${n}`;
   renderMatchList(
     list,
-    [...citadel.slice(0, 4), ...vallejo.slice(0, 4)],
+    ranked,
     (paint) => syncHexFromPaint(paint)
   );
 }
@@ -301,9 +329,22 @@ function bindHexLab() {
 
   $("#lookup-citadel-id").addEventListener("input", (e) => {
     const id = Number(e.target.value);
-    if (!id || id < 1 || id > 189) return;
+    const range = getCitadelIndexRange();
+    if (!id) return;
+    if (
+      !Number.isInteger(id) ||
+      id < range.min ||
+      id > range.max
+    ) {
+      $("#lookup-stats").textContent = `Enter a Citadel index from ${range.min} to ${range.max}.`;
+      return;
+    }
     const p = findById("citadel", id);
-    if (p) syncHexFromPaint(p);
+    if (p) {
+      syncHexFromPaint(p);
+    } else {
+      $("#lookup-stats").textContent = `No Citadel paint found for index #${id}.`;
+    }
   });
 
   document.querySelectorAll("[data-copy]").forEach((btn) => {
@@ -357,6 +398,7 @@ async function init() {
   bindBrowse();
   bindHexLab();
   updateLineFilter();
+  updateLookupRange();
   renderBrowse();
   renderMatchGrid();
   syncHexFields("#231f20");
