@@ -200,6 +200,24 @@ button.secondary {
   padding: 0.85rem 1rem;
 }
 
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  line-height: 1.1;
+}
+
+.summary-stat strong {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.summary-stat span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(380px, 0.9fr);
