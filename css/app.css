@@ -58,24 +58,87 @@ header p {
   font-size: 0.85rem;
 }
 
-nav.tabs {
+/* NAVIGATION FIX */
+.nav-tabs,
+.tabs,
+nav.tabs,
+nav {
+  position: relative;
   display: flex;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 2rem;
   padding: 0.75rem 1.5rem 0;
   border-bottom: 1px solid var(--border);
+  background: transparent;
 }
 
-nav.tabs button {
-  background: transparent;
+.nav-tabs button,
+.tabs button,
+nav.tabs button,
+nav a {
+  position: relative;
+  background: transparent !important;
   border: none;
+  outline: none;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0.6rem 1rem;
   color: var(--muted);
   font: inherit;
-  padding: 0.6rem 1rem;
   cursor: pointer;
+  transition: color 0.2s ease;
   border-bottom: 2px solid transparent;
 }
 
-nav.tabs button.active {
+/* REMOVE THE WEIRD BUBBLE / ACTIVE BG */
+.nav-tabs button::before,
+.nav-tabs button::after,
+.tabs button::before,
+.tabs button::after,
+nav.tabs button::before,
+nav.tabs button::after,
+nav a::before,
+nav a::after {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* ACTIVE TAB */
+.nav-tabs .active,
+.nav-tabs button.active,
+.tabs .active,
+.tabs button.active,
+nav.tabs .active,
+nav.tabs button.active,
+nav a.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* CLEAN UNDERLINE */
+.nav-tabs .active::after,
+.nav-tabs button.active::after,
+.tabs .active::after,
+.tabs button.active::after,
+nav.tabs .active::after,
+nav.tabs button.active::after,
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* shadcn Tabs support */
+[data-state="active"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   color: var(--text);
   border-bottom-color: var(--accent);
 }
@@ -117,6 +180,7 @@ button {
   font: inherit;
   border-radius: var(--radius);
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 button.secondary {
@@ -542,4 +606,51 @@ button.secondary {
     grid-column: 1 / -1;
     text-align: left;
   }
+}
+
+/* AUTH BUTTON SPACING FIX */
+
+.auth-header,
+.auth-controls,
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem 0;
+}
+
+/* GOOGLE SIGN-IN BUTTON */
+.google-signin-btn,
+.signin-btn,
+button[data-google-signin] {
+  margin-bottom: 1rem;
+}
+
+/* CARD CONTAINER BELOW */
+.auth-card-wrapper,
+.profile-wrapper {
+  margin-top: 0.5rem;
+}
+
+/* REMOVE STICKING TO BORDER */
+.auth-section {
+  padding-top: 1rem;
+}
+
+/* ONLY TARGET AUTH BUTTON AREA */
+/* DO NOT APPLY GLOBAL BUTTON MARGINS */
+
+.auth-header button,
+.auth-controls button,
+.google-signin-btn,
+.signin-btn,
+button[data-google-signin] {
+  margin-bottom: 1rem;
+}
+
+/* RESET CARD ACTION BUTTONS */
+.paint-card button,
+.paint-actions button,
+.card-actions button {
+  margin-bottom: 0 !important;
 }
