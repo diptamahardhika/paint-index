@@ -18,8 +18,8 @@ Open [http://localhost:8081](http://localhost:8081).
 You can pull and run the pre-built image directly without cloning the code:
 
 ```bash
-docker pull ghcr.io/diptamahardhika/paint-index:latest
-docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:latest
+docker pull ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.3
+docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.3
 ```
 
 ### Use Docker Compose
