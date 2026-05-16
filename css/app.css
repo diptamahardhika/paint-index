@@ -33,9 +33,9 @@ html, body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem 3rem;
+  padding: 1.5rem 1.5rem 3rem;
 }
 
 header {
@@ -92,7 +92,7 @@ nav.tabs button.active {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   align-items: center;
 }
 
@@ -104,56 +104,141 @@ select {
   border: 1px solid var(--border);
   color: var(--text);
   border-radius: var(--radius);
-  padding: 0.5rem 0.75rem;
+  padding: 0.7rem 0.9rem;
+  min-height: 44px;
   font: inherit;
 }
 
 input[type="search"] {
-  flex: 1 1 220px;
+  flex: 1 1 320px;
+}
+
+button {
+  font: inherit;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button.secondary {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+}
+
+.inventory-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.inventory-profile-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.profile-card,
+.inventory-auth-user {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 260px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-card label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.inventory-auth-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.inventory-auth-user p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.inventory-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inventory-summary > * {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 14px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, transform 0.15s;
 }
 
 .card:hover,
 .card.selected {
   border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .card-swatch {
-  height: 72px;
+  height: 104px;
   border-bottom: 1px solid var(--border);
 }
 
 .card-body {
-  padding: 0.65rem;
+  padding: 0.85rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.45rem;
 }
 
 .card-body h3 {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
 }
 
 .card-body code {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
 }
 
 .inventory-pill {
@@ -163,7 +248,7 @@ input[type="search"] {
   margin-top: 0.45rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 0.1rem 0.45rem;
+  padding: 0.18rem 0.6rem;
   font-size: 0.72rem;
   color: var(--text);
 }
@@ -190,9 +275,29 @@ input[type="search"] {
   border: 0;
   border-right: 1px solid var(--border);
   color: var(--muted);
-  min-height: 34px;
+  min-height: 42px;
 }
 
 .card-actions button:last-child {
   border-right: 0;
+}
+
+@media (max-width: 768px) {
+  .inventory-header {
+    padding: 1rem;
+  }
+
+  .inventory-profile-group,
+  .inventory-summary {
+    width: 100%;
+  }
+
+  .profile-card,
+  .inventory-auth-user {
+    min-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
 }
