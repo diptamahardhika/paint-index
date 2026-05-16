@@ -57,6 +57,27 @@
       </section>
 
       <section id="panel-inventory" class="panel" role="tabpanel">
+        <div class="inventory-auth-banner" id="inventory-auth-banner">
+          <strong>Cloud sync available</strong>
+          <p>
+            Local inventories are device-specific. Sign in with Google to sync
+            your paints across devices.
+          </p>
+          <button type="button" class="secondary" id="google-login-button">
+            Sign in with Google
+          </button>
+        </div>
+
+        <div class="inventory-auth-user" id="inventory-auth-user" hidden>
+          <div>
+            <strong id="auth-user-name">Authenticated</strong>
+            <p id="auth-user-email">Cloud inventory enabled</p>
+          </div>
+          <button type="button" class="secondary" id="google-logout-button">
+            Sign out
+          </button>
+        </div>
+
         <div class="inventory-header">
           <div class="profile-card">
             <label for="inventory-profile-name">Profile</label>
@@ -210,6 +231,7 @@
 
     <div id="toast" class="copied-toast" aria-live="polite">Copied</div>
 
+    <script type="module" src="./js/auth.js"></script>
     <script type="module" src="./js/app.js?v=1.0.0-beta.3"></script>
   </body>
 </html>
