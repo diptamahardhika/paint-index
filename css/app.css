@@ -192,9 +192,141 @@ input[type="search"] {
 }
 
 .card-body code {
+  display: block;
   font-family: var(--mono);
   font-size: 0.72rem;
   color: var(--muted);
+}
+
+.inventory-pill {
+  display: inline-flex;
+  margin-top: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.72rem;
+  color: var(--text);
+}
+
+.inventory-pill.owned {
+  border-color: var(--excellent);
+  color: var(--excellent);
+}
+
+.inventory-pill.wishlist {
+  border-color: var(--fair);
+  color: var(--fair);
+}
+
+.card-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+}
+
+.card-actions button.mini-action {
+  appearance: none;
+  min-height: 34px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.74rem;
+  padding: 0;
+}
+
+.card-actions button.mini-action:last-child {
+  border-right: 0;
+}
+
+.card-actions button.mini-action:hover,
+.card-actions button.mini-action.active {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.card-actions button.mini-action.danger:hover {
+  color: var(--weak);
+}
+
+.inventory-header {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: stretch;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+}
+
+.profile-card label {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.profile-card input {
+  width: 100%;
+}
+
+.inventory-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(72px, 1fr));
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+}
+
+.summary-stat {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.summary-stat strong {
+  font-family: var(--mono);
+  font-size: 1rem;
+}
+
+.summary-stat span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.inventory-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+@media (max-width: 760px) {
+  .inventory-header {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-stat {
+    grid-template-columns: 1fr;
+    gap: 0;
+    text-align: center;
+  }
 }
 
 .split {

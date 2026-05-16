@@ -1,7 +1,7 @@
 {
   "name": "Paint Index",
   "short_name": "Paint Index",
-  "description": "Cross-reference Citadel Colour and Vallejo paints with HEX conversion and color matching.",
+  "description": "Cross-reference Citadel Colour and Vallejo paints with inventory tracking, HEX conversion, and color matching.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#141312",

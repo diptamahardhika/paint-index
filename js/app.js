@@ -23,10 +23,126 @@ const state = {
   browseQuery: "",
   browseBrand: "all",
   browseLine: "all",
+  inventoryQuery: "",
+  inventoryStatus: "all",
+  inventoryBrand: "all",
+  inventory: null,
   hexSync: true,
 };
 
 const $ = (sel) => document.querySelector(sel);
+const INVENTORY_STORAGE_KEY = "paint-index.inventory.v1";
+
+function createDefaultInventory() {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    activeProfileId: "default",
+    profiles: [
+      {
+        id: "default",
+        name: "My paints",
+        createdAt: now,
+        updatedAt: now,
+        items: {},
+      },
+    ],
+  };
+}
+
+function normalizeInventory(raw) {
+  const fallback = createDefaultInventory();
+  if (!raw || typeof raw !== "object") return fallback;
+  const profiles = Array.isArray(raw.profiles)
+    ? raw.profiles
+        .filter((p) => p && typeof p === "object")
+        .map((p) => ({
+          id: String(p.id || "default"),
+          name: String(p.name || "My paints").slice(0, 48),
+          createdAt: p.createdAt || new Date().toISOString(),
+          updatedAt: p.updatedAt || new Date().toISOString(),
+          items: p.items && typeof p.items === "object" ? p.items : {},
+        }))
+    : [];
+  fallback.profiles = profiles.length ? profiles : fallback.profiles;
+  fallback.activeProfileId =
+    raw.activeProfileId &&
+    fallback.profiles.some((p) => p.id === raw.activeProfileId)
+      ? raw.activeProfileId
+      : fallback.profiles[0].id;
+  return fallback;
+}
+
+function loadInventoryState() {
+  try {
+    const raw = localStorage.getItem(INVENTORY_STORAGE_KEY);
+    return normalizeInventory(raw ? JSON.parse(raw) : null);
+  } catch {
+    return createDefaultInventory();
+  }
+}
+
+function saveInventoryState() {
+  if (!state.inventory) return;
+  try {
+    localStorage.setItem(
+      INVENTORY_STORAGE_KEY,
+      JSON.stringify(state.inventory)
+    );
+  } catch {
+    showToast("Inventory could not be saved");
+  }
+}
+
+function activeProfile() {
+  if (!state.inventory) state.inventory = createDefaultInventory();
+  let profile = state.inventory.profiles.find(
+    (p) => p.id === state.inventory.activeProfileId
+  );
+  if (!profile) {
+    profile = state.inventory.profiles[0];
+    state.inventory.activeProfileId = profile.id;
+  }
+  return profile;
+}
+
+function paintKey(p) {
+  return `${p.brand}:${p.id}`;
+}
+
+function getInventoryItem(p) {
+  return activeProfile().items[paintKey(p)] || null;
+}
+
+function setInventoryStatus(p, status) {
+  const profile = activeProfile();
+  const key = paintKey(p);
+  const now = new Date().toISOString();
+  if (!status) {
+    delete profile.items[key];
+    profile.updatedAt = now;
+    saveInventoryState();
+    refreshInventoryViews();
+    showToast("Removed from inventory");
+    return;
+  }
+  profile.items[key] = {
+    ...(profile.items[key] || { addedAt: now }),
+    status,
+    updatedAt: now,
+  };
+  profile.updatedAt = now;
+  saveInventoryState();
+  refreshInventoryViews();
+  showToast(status === "owned" ? "Marked as owned" : "Added to wishlist");
+}
+
+function inventoryCounts() {
+  const items = Object.values(activeProfile().items);
+  const owned = items.filter((item) => item.status === "owned").length;
+  const wishlist = items.filter((item) => item.status === "wishlist").length;
+  return { owned, wishlist, total: owned + wishlist };
+}
 
 function showToast(msg = "Copied") {
   const t = $("#toast");
@@ -60,7 +176,14 @@ function swatchBackground(p) {
   return p.hex;
 }
 
-function paintCard(p, { onClick, selected = false } = {}) {
+function paintCard(p, { onClick, selected = false, showInventory = true } = {}) {
+  const inventoryItem = getInventoryItem(p);
+  const statusLabel =
+    inventoryItem?.status === "owned"
+      ? "Owned"
+      : inventoryItem?.status === "wishlist"
+        ? "Wishlist"
+        : "";
   const el = document.createElement("article");
   el.className = "card" + (selected ? " selected" : "");
   el.dataset.brand = p.brand;
@@ -71,9 +194,30 @@ function paintCard(p, { onClick, selected = false } = {}) {
     `<span class="brand-pill ${p.brand}">${brandLabel(p.brand)} · ${escapeHtml(p.line)}</span>`,
     `<h3>${escapeHtml(p.name)}</h3>`,
     `<code>${escapeHtml(p.hex)} · ${escapeHtml(p.indexLabel)}</code>`,
+    statusLabel
+      ? `<span class="inventory-pill ${inventoryItem.status}">${statusLabel}</span>`
+      : "",
     `</div>`,
+    showInventory
+      ? `<div class="card-actions">
+          <button type="button" class="mini-action ${
+            inventoryItem?.status === "owned" ? "active" : ""
+          }" data-inventory-action="owned" title="Mark as owned">Own</button>
+          <button type="button" class="mini-action ${
+            inventoryItem?.status === "wishlist" ? "active" : ""
+          }" data-inventory-action="wishlist" title="Add to wishlist">Wish</button>
+          <button type="button" class="mini-action danger" data-inventory-action="remove" title="Remove from inventory">Remove</button>
+        </div>`
+      : "",
   ].join("");
   if (onClick) el.addEventListener("click", () => onClick(p));
+  el.querySelectorAll("[data-inventory-action]").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const action = btn.dataset.inventoryAction;
+      setInventoryStatus(p, action === "remove" ? null : action);
+    });
+  });
   return el;
 }
 
@@ -148,6 +292,99 @@ function renderBrowse() {
     more.textContent = `Refine your search to see more than ${cap} results.`;
     grid.after(more);
   }
+}
+
+function paintFromKey(key) {
+  const [brand, id] = String(key).split(":");
+  return findById(brand, id);
+}
+
+function inventoryPaints() {
+  const profile = activeProfile();
+  return Object.entries(profile.items)
+    .map(([key, item]) => {
+      const paint = paintFromKey(key);
+      return paint ? { paint, item } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => {
+      const byStatus = a.item.status.localeCompare(b.item.status);
+      if (byStatus) return byStatus;
+      return a.paint.name.localeCompare(b.paint.name);
+    });
+}
+
+function renderInventory() {
+  const profile = activeProfile();
+  const profileName = $("#inventory-profile-name");
+  const grid = $("#inventory-grid");
+  const stats = $("#inventory-stats");
+  const summary = $("#inventory-summary");
+  const counts = inventoryCounts();
+
+  if (document.activeElement !== profileName) {
+    profileName.value = profile.name;
+  }
+  summary.innerHTML = `
+    <div class="summary-stat"><strong>${counts.total}</strong><span>Total</span></div>
+    <div class="summary-stat"><strong>${counts.owned}</strong><span>Owned</span></div>
+    <div class="summary-stat"><strong>${counts.wishlist}</strong><span>Wishlist</span></div>
+  `;
+
+  const brand = state.inventoryBrand;
+  const status = state.inventoryStatus;
+  const q = state.inventoryQuery.trim();
+  let cards = [];
+
+  if (q) {
+    cards = searchPaints(q, brand).map((paint) => ({ paint, item: null }));
+  } else {
+    cards = inventoryPaints().filter(({ paint, item }) => {
+      if (brand !== "all" && paint.brand !== brand) return false;
+      if (status !== "all" && item.status !== status) return false;
+      return true;
+    });
+  }
+
+  const cap = q ? 120 : 240;
+  stats.textContent = q
+    ? `${cards.length} library result${cards.length === 1 ? "" : "s"}${
+        cards.length > cap ? ` (showing ${cap})` : ""
+      }`
+    : `${cards.length} inventory paint${cards.length === 1 ? "" : "s"}`;
+
+  grid.innerHTML = "";
+  if (!cards.length) {
+    const empty = document.createElement("p");
+    empty.className = "inventory-empty";
+    empty.textContent = q
+      ? "No paints match that search."
+      : "Your inventory is empty. Search above or use the Own/Wish buttons while browsing paints.";
+    grid.appendChild(empty);
+    return;
+  }
+
+  const frag = document.createDocumentFragment();
+  for (const { paint } of cards.slice(0, cap)) {
+    frag.appendChild(
+      paintCard(paint, {
+        onClick: (target) => {
+          state.selectedMatch = target;
+          switchTab("match");
+          renderMatchDetail();
+          renderMatchGrid();
+        },
+      })
+    );
+  }
+  grid.appendChild(frag);
+}
+
+function refreshInventoryViews() {
+  renderInventory();
+  renderBrowse();
+  renderMatchGrid();
+  renderMatchDetail();
 }
 
 function renderMatchGrid() {
@@ -387,6 +624,33 @@ function bindBrowse() {
   $("#match-search").addEventListener("input", renderMatchGrid);
 }
 
+function bindInventory() {
+  $("#inventory-profile-name").addEventListener("input", (e) => {
+    const profile = activeProfile();
+    profile.name = e.target.value.trim() || "My paints";
+    profile.updatedAt = new Date().toISOString();
+    saveInventoryState();
+    renderInventory();
+  });
+  $("#inventory-search").addEventListener("input", (e) => {
+    state.inventoryQuery = e.target.value;
+    renderInventory();
+  });
+  $("#inventory-status").addEventListener("change", (e) => {
+    state.inventoryStatus = e.target.value;
+    renderInventory();
+  });
+  $("#inventory-brand").addEventListener("change", (e) => {
+    state.inventoryBrand = e.target.value;
+    renderInventory();
+  });
+  $("#inventory-export").addEventListener("click", () => {
+    const payload = JSON.stringify(activeProfile(), null, 2);
+    copyText(payload);
+    showToast("Inventory JSON copied");
+  });
+}
+
 async function init() {
   try {
     await loadPaints();
@@ -394,12 +658,15 @@ async function init() {
     document.body.innerHTML = `<main style="padding:2rem;font-family:system-ui"><h1>Could not load paint data</h1><p>Start a local server in the <code>paint-index</code> folder:</p><pre>cd paint-index && python3 -m http.server 8081</pre><p>Then open <a href="http://localhost:8081">http://localhost:8081</a></p><pre>${escapeHtml(String(err))}</pre></main>`;
     return;
   }
+  state.inventory = loadInventoryState();
   bindTabs();
   bindBrowse();
+  bindInventory();
   bindHexLab();
   updateLineFilter();
   updateLookupRange();
   renderBrowse();
+  renderInventory();
   renderMatchGrid();
   syncHexFields("#231f20");
 }

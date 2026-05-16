@@ -33,6 +33,7 @@ The app will be available at [http://localhost:8081](http://localhost:8081).
 ## Features
 
 - **Browse** — Search and filter 352 Citadel colours and 1,268 Vallejo paints across 20 paint lines.
+- **Inventory** — Track owned paints and wishlist paints in a browser-local profile that persists across sessions, with JSON export for backup.
 - **Cross-reference** — Pick a paint; see the closest matches in the other brand (CIE76 ΔE in Lab space).
 - **HEX lab** — Convert HEX ↔ RGB ↔ B&C format (`231F20`), copy forum BBCode, look up the full Citadel index, and find nearest paints for any color.
 
