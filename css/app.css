@@ -156,6 +156,28 @@ input[type="search"] {
   font-size: 0.72rem;
 }
 
+.inventory-pill {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.72rem;
+  color: var(--text);
+}
+
+.inventory-pill.owned {
+  border-color: var(--excellent);
+  color: var(--excellent);
+}
+
+.inventory-pill.wishlist {
+  border-color: var(--fair);
+  color: var(--fair);
+}
+
 .card-actions {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -173,117 +195,4 @@ input[type="search"] {
 
 .card-actions button:last-child {
   border-right: 0;
-}
-
-.inventory-header {
-  display: grid;
-  grid-template-columns: minmax(320px, 1fr) auto;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.inventory-profile-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.profile-card,
-.inventory-auth-user,
-.inventory-summary,
-.detail-panel,
-.hex-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.profile-card,
-.inventory-auth-user {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.85rem 1rem;
-  gap: 0.75rem;
-}
-
-.profile-card input {
-  width: 100%;
-}
-
-.inventory-summary {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(72px, 1fr));
-  padding: 0.85rem 1rem;
-}
-
-.summary-stat strong {
-  font-family: var(--mono);
-}
-
-.stats {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 0.75rem;
-}
-
-button.secondary {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: var(--radius);
-  padding: 0.4rem 0.75rem;
-}
-
-#google-logout-button {
-  background: transparent;
-  border-color: rgba(255,255,255,0.08);
-  color: rgba(236,230,223,0.72);
-}
-
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-
-.hex-lab {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.hex-card,
-.detail-panel {
-  padding: 1rem;
-}
-
-.sources {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-}
-
-.copied-toast {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-}
-
-@media (max-width: 800px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .inventory-header {
-    grid-template-columns: 1fr;
-  }
-
-  .inventory-auth-user {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
