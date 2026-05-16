@@ -8,5 +8,3 @@ services:
     restart: unless-stopped
     volumes:
       - ./firebase.js:/usr/share/nginx/html/firebase.js:ro
-    env_file:
-      - .env
