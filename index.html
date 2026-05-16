@@ -124,6 +124,113 @@
         <p class="stats" id="inventory-stats"></p>
         <div id="inventory-grid" class="grid"></div>
       </section>
+
+      <section id="panel-match" class="panel" role="tabpanel">
+        <div class="split">
+          <div>
+            <div class="toolbar">
+              <input
+                type="search"
+                id="match-search"
+                placeholder="Find a paint to match…"
+                autocomplete="off"
+              />
+            </div>
+            <p class="stats" id="match-stats"></p>
+            <div id="match-grid" class="grid"></div>
+          </div>
+          <div>
+            <div id="match-detail" class="detail-panel empty">
+              Select a paint to see the closest matches in the other brand.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-hex" class="panel" role="tabpanel">
+        <div class="hex-lab">
+          <article class="hex-card">
+            <h3>HEX ↔ RGB converter</h3>
+            <div
+              class="hex-preview"
+              id="hex-preview"
+              style="background: #231f20"
+            ></div>
+            <div class="field-row">
+              <label for="hex-input">HEX</label>
+              <input type="text" id="hex-input" value="#231f20" spellcheck="false" />
+            </div>
+            <div class="field-row">
+              <label for="bnc-input">B&amp;C</label>
+              <input
+                type="text"
+                id="bnc-input"
+                value="231F20"
+                spellcheck="false"
+                title="Bolter & Chainsword index format (6-char hex, no #)"
+              />
+            </div>
+            <div class="field-row">
+              <label for="rgb-input">RGB</label>
+              <input type="text" id="rgb-input" value="35, 31, 32" spellcheck="false" />
+            </div>
+            <div class="btn-row">
+              <button type="button" class="secondary" data-copy="hex">
+                Copy HEX
+              </button>
+              <button type="button" class="secondary" data-copy="bnc">
+                Copy B&amp;C
+              </button>
+              <button type="button" class="secondary" data-copy="rgb">
+                Copy RGB
+              </button>
+              <button type="button" class="secondary" data-copy="bbcode">
+                Copy BBCode
+              </button>
+            </div>
+          </article>
+
+          <article class="hex-card">
+            <h3>Lookup in paint index</h3>
+            <p class="stats" id="lookup-guidance">
+              Enter a color or Citadel index # to find the nearest paints
+              in the library.
+            </p>
+            <div class="field-row">
+              <label for="lookup-citadel-id">Citadel #</label>
+              <input
+                type="number"
+                id="lookup-citadel-id"
+                min="1"
+                max="352"
+                placeholder="e.g. 1"
+              />
+            </div>
+            <p class="stats" id="lookup-stats"></p>
+            <ul id="lookup-results" class="match-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <footer class="sources">
+        <strong>Data sources &amp; notes</strong>
+        <ul>
+          <li>
+            Citadel: 352 indexed paints; hex from
+            <a href="https://citadelcolour.com/">citadelcolour.com</a> via
+            <a href="https://github.com/SimoGecko/CitadelColours">SimoGecko/CitadelColours</a>
+            (Nov 2024). Gradients use darker hex for matching.
+          </li>
+          <li>
+            Vallejo: 1,268 paints across 20 lines from
+            <a href="https://github.com/Arcturus5404/miniature-paints/blob/main/paints/Vallejo.md">Arcturus5404/miniature-paints</a>.
+          </li>
+          <li>
+            Cross-brand matches use ΔE (CIE76 in Lab). Washes, metallics, and
+            textures may differ from swatches on screen.
+          </li>
+        </ul>
+      </footer>
     </main>
 
     <div id="toast" class="copied-toast" aria-live="polite">Copied</div>
