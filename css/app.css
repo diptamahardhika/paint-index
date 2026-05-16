@@ -58,24 +58,87 @@ header p {
   font-size: 0.85rem;
 }
 
-nav.tabs {
+/* NAVIGATION FIX */
+.nav-tabs,
+.tabs,
+nav.tabs,
+nav {
+  position: relative;
   display: flex;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 2rem;
   padding: 0.75rem 1.5rem 0;
   border-bottom: 1px solid var(--border);
+  background: transparent;
 }
 
-nav.tabs button {
-  background: transparent;
+.nav-tabs button,
+.tabs button,
+nav.tabs button,
+nav a {
+  position: relative;
+  background: transparent !important;
   border: none;
+  outline: none;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0.6rem 1rem;
   color: var(--muted);
   font: inherit;
-  padding: 0.6rem 1rem;
   cursor: pointer;
+  transition: color 0.2s ease;
   border-bottom: 2px solid transparent;
 }
 
-nav.tabs button.active {
+/* REMOVE THE WEIRD BUBBLE / ACTIVE BG */
+.nav-tabs button::before,
+.nav-tabs button::after,
+.tabs button::before,
+.tabs button::after,
+nav.tabs button::before,
+nav.tabs button::after,
+nav a::before,
+nav a::after {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* ACTIVE TAB */
+.nav-tabs .active,
+.nav-tabs button.active,
+.tabs .active,
+.tabs button.active,
+nav.tabs .active,
+nav.tabs button.active,
+nav a.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* CLEAN UNDERLINE */
+.nav-tabs .active::after,
+.nav-tabs button.active::after,
+.tabs .active::after,
+.tabs button.active::after,
+nav.tabs .active::after,
+nav.tabs button.active::after,
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* shadcn Tabs support */
+[data-state="active"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   color: var(--text);
   border-bottom-color: var(--accent);
 }
