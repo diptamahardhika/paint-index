@@ -127,6 +127,11 @@ button.secondary {
   padding: 0.7rem 1rem;
 }
 
+.stats {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
 .inventory-header {
   display: flex;
   flex-wrap: wrap;
@@ -193,6 +198,90 @@ button.secondary {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 0.85rem 1rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.detail-panel {
+  position: sticky;
+  top: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  min-height: 520px;
+}
+
+.detail-panel.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-align: center;
+}
+
+.hex-lab {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.hex-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.hex-card h3 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.hex-preview {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.field-row label {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.field-row input {
+  width: 100%;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.match-list {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.match-list li {
+  margin-bottom: 1rem;
 }
 
 .grid {
@@ -282,6 +371,39 @@ button.secondary {
   border-right: 0;
 }
 
+.sources {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sources ul {
+  padding-left: 1.2rem;
+}
+
+.copied-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 980px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-panel {
+    position: static;
+    min-height: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .inventory-header {
     padding: 1rem;
@@ -299,5 +421,10 @@ button.secondary {
 
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 }
