@@ -213,7 +213,15 @@ button.secondary {
 }
 
 .summary-stat span {
+  display: block;
   color: var(--muted);
   font-size: 0.78rem;
   letter-spacing: 0.04em;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(380px, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
 }
