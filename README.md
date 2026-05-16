@@ -18,8 +18,8 @@ Open [http://localhost:8081](http://localhost:8081).
 You can pull and run the pre-built image directly without cloning the code:
 
 ```bash
-docker pull ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.3
-docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.3
+docker pull ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.4
+docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.4
 ```
 
 ### Use Docker Compose
@@ -33,7 +33,7 @@ The app will be available at [http://localhost:8081](http://localhost:8081).
 ## Features
 
 - **Browse** — Search and filter 352 Citadel colours and 1,268 Vallejo paints across 20 paint lines.
-- **Inventory** — Track owned paints and wishlist paints in a browser-local profile that persists across sessions, with JSON export for backup.
+- **Inventory** — Track owned paints and wishlist paints locally, optionally sign in with Google to sync across devices, and export JSON for backup.
 - **Cross-reference** — Pick a paint; see the closest matches in the other brand (CIE76 ΔE in Lab space).
 - **HEX lab** — Convert HEX ↔ RGB ↔ B&C format (`231F20`), copy forum BBCode, look up the full Citadel index, and find nearest paints for any color.
 
