@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   paint-index:
-    build: .
+    image: ghcr.io/diptamahardhika/paint-index:latest
     container_name: paint-index-app
     ports:
       - "8081:80"

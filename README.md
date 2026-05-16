@@ -18,15 +18,15 @@ Open [http://localhost:8081](http://localhost:8081).
 You can pull and run the pre-built image directly without cloning the code:
 
 ```bash
-docker pull ghcr.io/diptamahardhika/paint-index:main
-docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:main
+docker pull ghcr.io/diptamahardhika/paint-index:latest
+docker run -d --name paint-index -p 8081:80 ghcr.io/diptamahardhika/paint-index:latest
 ```
 
 ### Use Docker Compose
-If you have the repository cloned locally, use the provided compose file:
+Use the provided compose file to pull and run the published image:
 
 ```bash
-docker compose up -d --build
+docker compose up -d
 ```
 The app will be available at [http://localhost:8081](http://localhost:8081).
 
