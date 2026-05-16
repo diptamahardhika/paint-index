@@ -1,9 +1,10 @@
-# Environment variables
+# Environment and runtime configuration
 .env
 .env.local
 .env.*.local
+firebase.js
 
-# Node modules
+# Dependencies
 node_modules/
 
 # Logs
