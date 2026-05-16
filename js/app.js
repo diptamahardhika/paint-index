@@ -26,12 +26,73 @@ const state = {
   inventoryQuery: "",
   inventoryStatus: "all",
   inventoryBrand: "all",
+  inventorySort: localStorage.getItem("paint-index.inventory-sort") || "name",
   inventory: null,
   hexSync: true,
 };
 
 const $ = (sel) => document.querySelector(sel);
 const INVENTORY_STORAGE_KEY = "paint-index.inventory.v1";
+const INVENTORY_SORT_STORAGE_KEY = "paint-index.inventory-sort";
+
+function getPaintHue(hex) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return 0;
+
+  const r = rgb.r / 255;
+  const g = rgb.g / 255;
+  const b = rgb.b / 255;
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const delta = max - min;
+
+  if (delta === 0) return 0;
+
+  let hue;
+
+  if (max === r) {
+    hue = ((g - b) / delta) % 6;
+  } else if (max === g) {
+    hue = (b - r) / delta + 2;
+  } else {
+    hue = (r - g) / delta + 4;
+  }
+
+  hue *= 60;
+
+  if (hue < 0) {
+    hue += 360;
+  }
+
+  return Math.round(hue);
+}
+
+function sortInventoryCards(cards) {
+  const sort = state.inventorySort;
+
+  return [...cards].sort((a, b) => {
+    if (!state.inventoryQuery) {
+      const byStatus = a.item.status.localeCompare(b.item.status);
+      if (byStatus) return byStatus;
+    }
+
+    if (sort === "brand") {
+      const byBrand = a.paint.brand.localeCompare(b.paint.brand);
+      if (byBrand) return byBrand;
+
+      const byLine = a.paint.line.localeCompare(b.paint.line);
+      if (byLine) return byLine;
+    }
+
+    if (sort === "hue") {
+      const byHue = getPaintHue(a.paint.hex) - getPaintHue(b.paint.hex);
+      if (byHue) return byHue;
+    }
+
+    return a.paint.name.localeCompare(b.paint.name);
+  });
+}
 
 function createDefaultInventory() {
   const now = new Date().toISOString();
@@ -166,7 +227,7 @@ function escapeHtml(s) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/\"/g, "&quot;");
 }
 
 function swatchBackground(p) {
@@ -286,12 +347,6 @@ function renderBrowse() {
     );
   }
   grid.appendChild(frag);
-  if (list.length > cap) {
-    const more = document.createElement("p");
-    more.className = "stats stats-more";
-    more.textContent = `Refine your search to see more than ${cap} results.`;
-    grid.after(more);
-  }
 }
 
 function paintFromKey(key) {
@@ -301,17 +356,15 @@ function paintFromKey(key) {
 
 function inventoryPaints() {
   const profile = activeProfile();
-  return Object.entries(profile.items)
-    .map(([key, item]) => {
-      const paint = paintFromKey(key);
-      return paint ? { paint, item } : null;
-    })
-    .filter(Boolean)
-    .sort((a, b) => {
-      const byStatus = a.item.status.localeCompare(b.item.status);
-      if (byStatus) return byStatus;
-      return a.paint.name.localeCompare(b.paint.name);
-    });
+
+  return sortInventoryCards(
+    Object.entries(profile.items)
+      .map(([key, item]) => {
+        const paint = paintFromKey(key);
+        return paint ? { paint, item } : null;
+      })
+      .filter(Boolean)
+  );
 }
 
 function renderInventory() {
@@ -337,7 +390,9 @@ function renderInventory() {
   let cards = [];
 
   if (q) {
-    cards = searchPaints(q, brand).map((paint) => ({ paint, item: null }));
+    cards = sortInventoryCards(
+      searchPaints(q, brand).map((paint) => ({ paint, item: null }))
+    );
   } else {
     cards = inventoryPaints().filter(({ paint, item }) => {
       if (brand !== "all" && paint.brand !== brand) return false;
@@ -351,7 +406,7 @@ function renderInventory() {
     ? `${cards.length} library result${cards.length === 1 ? "" : "s"}${
         cards.length > cap ? ` (showing ${cap})` : ""
       }`
-    : `${cards.length} inventory paint${cards.length === 1 ? "" : "s"}`;
+    : `${cards.length} inventory paint${cards.length === 1 ? "" : "s"} · Sorted by ${state.inventorySort}`;
 
   grid.innerHTML = "";
   if (!cards.length) {
@@ -450,16 +505,15 @@ function renderMatchDetail() {
 function updateLineFilter() {
   const sel = $("#browse-line");
   const brand = state.browseBrand;
-  const lines = new Set(); 
+  const lines = new Set();
   for (const p of getPaints()) {
     if (brand === "all" || p.brand === brand) lines.add(p.line);
   }
   const current = sel.value;
   sel.innerHTML = '<option value="all">All lines</option>';
   const sortedLines = [...lines].sort((a, b) => {
-    // Put official types first, then 'Classic'
-    if (a === 'Classic') return 1;
-    if (b === 'Classic') return -1;
+    if (a === "Classic") return 1;
+    if (b === "Classic") return -1;
     return a.localeCompare(b);
   });
   for (const line of sortedLines) {
@@ -644,6 +698,11 @@ function bindInventory() {
     state.inventoryBrand = e.target.value;
     renderInventory();
   });
+  $("#inventory-sort").addEventListener("change", (e) => {
+    state.inventorySort = e.target.value;
+    localStorage.setItem(INVENTORY_SORT_STORAGE_KEY, state.inventorySort);
+    renderInventory();
+  });
   $("#inventory-export").addEventListener("click", () => {
     const payload = JSON.stringify(activeProfile(), null, 2);
     copyText(payload);
@@ -665,6 +724,7 @@ async function init() {
   bindHexLab();
   updateLineFilter();
   updateLookupRange();
+  $("#inventory-sort").value = state.inventorySort;
   renderBrowse();
   renderInventory();
   renderMatchGrid();
