@@ -202,7 +202,7 @@ button.secondary {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(380px, 0.9fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -223,6 +223,21 @@ button.secondary {
   justify-content: center;
   color: var(--muted);
   text-align: center;
+}
+
+.detail-hero {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.detail-swatch {
+  width: 84px;
+  height: 84px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
 }
 
 .hex-lab {
@@ -276,12 +291,80 @@ button.secondary {
 }
 
 .match-list {
+  list-style: none;
   margin: 1rem 0 0;
-  padding-left: 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
 .match-list li {
-  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.85rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.match-list li:hover {
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.04);
+}
+
+.match-swatch {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.match-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.match-meta strong {
+  font-size: 0.92rem;
+}
+
+.match-meta span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.match-score {
+  text-align: right;
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid currentColor;
+}
+
+.match-score.excellent {
+  color: var(--excellent);
+}
+
+.match-score.good {
+  color: var(--good);
+}
+
+.match-score.fair {
+  color: var(--fair);
+}
+
+.match-score.weak {
+  color: var(--weak);
 }
 
 .grid {
@@ -328,6 +411,11 @@ button.secondary {
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.74rem;
+}
+
+.brand-pill {
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 .inventory-pill {
@@ -426,5 +514,14 @@ button.secondary {
   .field-row {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .match-list li {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .match-score {
+    grid-column: 1 / -1;
+    text-align: left;
   }
 }
