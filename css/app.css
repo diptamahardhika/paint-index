@@ -180,6 +180,7 @@ button {
   font: inherit;
   border-radius: var(--radius);
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 button.secondary {
@@ -605,4 +606,33 @@ button.secondary {
     grid-column: 1 / -1;
     text-align: left;
   }
+}
+
+/* AUTH BUTTON SPACING FIX */
+
+.auth-header,
+.auth-controls,
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem 0;
+}
+
+/* GOOGLE SIGN-IN BUTTON */
+.google-signin-btn,
+.signin-btn,
+button[data-google-signin] {
+  margin-bottom: 1rem;
+}
+
+/* CARD CONTAINER BELOW */
+.auth-card-wrapper,
+.profile-wrapper {
+  margin-top: 0.5rem;
+}
+
+/* REMOVE STICKING TO BORDER */
+.auth-section {
+  padding-top: 1rem;
 }
