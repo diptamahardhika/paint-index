@@ -1,4 +1,8 @@
-const AUTH_STORAGE_KEY = "paint-index.auth.user";
+import {
+  loginWithGoogle,
+  logoutUser,
+  subscribeToAuth,
+} from './firebase/auth.js';
 
 const authState = {
   user: null,
@@ -8,27 +12,9 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
-function loadCachedUser() {
-  try {
-    const raw = localStorage.getItem(AUTH_STORAGE_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
-function saveCachedUser(user) {
-  if (!user) {
-    localStorage.removeItem(AUTH_STORAGE_KEY);
-    return;
-  }
-
-  localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
-}
-
 function renderAuthState() {
-  const banner = $("#inventory-auth-banner");
-  const userPanel = $("#inventory-auth-user");
+  const banner = $('#inventory-auth-banner');
+  const userPanel = $('#inventory-auth-user');
 
   if (!banner || !userPanel) {
     return;
@@ -38,11 +24,11 @@ function renderAuthState() {
     banner.hidden = true;
     userPanel.hidden = false;
 
-    $("#auth-user-name").textContent =
-      authState.user.displayName || "Authenticated User";
+    $('#auth-user-name').textContent =
+      authState.user.displayName || 'Authenticated User';
 
-    $("#auth-user-email").textContent =
-      authState.user.email || "Cloud inventory enabled";
+    $('#auth-user-email').textContent =
+      authState.user.email || 'Cloud inventory enabled';
 
     return;
   }
@@ -51,27 +37,25 @@ function renderAuthState() {
   userPanel.hidden = true;
 }
 
-function simulateGoogleLogin() {
-  const confirmed = window.confirm(
-    "Signing in will replace your current local inventory with your Google account inventory. Export your inventory first if needed."
-  );
+async function handleGoogleLogin() {
+  try {
+    await loginWithGoogle();
+  } catch (error) {
+    console.error('Google authentication failed', error);
 
-  if (!confirmed) {
-    return;
+    window.alert(
+      'Google authentication failed. Check Firebase configuration and authorized domains.'
+    );
   }
+}
 
-  const user = {
-    uid: "temporary-dev-user",
-    displayName: "Google User",
-    email: "google-auth-placeholder@example.com",
-  };
+async function handleLogout() {
+  await logoutUser();
+}
 
-  authState.user = user;
-  saveCachedUser(user);
-  renderAuthState();
-
+function dispatchAuthChanged(user) {
   window.dispatchEvent(
-    new CustomEvent("paint-index-auth-changed", {
+    new CustomEvent('paint-index-auth-changed', {
       detail: {
         user,
       },
@@ -79,33 +63,28 @@ function simulateGoogleLogin() {
   );
 }
 
-function logout() {
-  authState.user = null;
-  saveCachedUser(null);
-  renderAuthState();
-
-  window.dispatchEvent(
-    new CustomEvent("paint-index-auth-changed", {
-      detail: {
-        user: null,
-      },
-    })
-  );
-}
-
 function bindAuth() {
-  $("#google-login-button")?.addEventListener(
-    "click",
-    simulateGoogleLogin
+  $('#google-login-button')?.addEventListener(
+    'click',
+    handleGoogleLogin
   );
 
-  $("#google-logout-button")?.addEventListener("click", logout);
+  $('#google-logout-button')?.addEventListener(
+    'click',
+    handleLogout
+  );
 }
 
 function initAuth() {
-  authState.user = loadCachedUser();
   bindAuth();
-  renderAuthState();
+
+  subscribeToAuth((user) => {
+    authState.user = user;
+
+    renderAuthState();
+
+    dispatchAuthChanged(user);
+  });
 }
 
 initAuth();
