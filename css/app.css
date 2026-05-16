@@ -636,3 +636,21 @@ button[data-google-signin] {
 .auth-section {
   padding-top: 1rem;
 }
+
+/* ONLY TARGET AUTH BUTTON AREA */
+/* DO NOT APPLY GLOBAL BUTTON MARGINS */
+
+.auth-header button,
+.auth-controls button,
+.google-signin-btn,
+.signin-btn,
+button[data-google-signin] {
+  margin-bottom: 1rem;
+}
+
+/* RESET CARD ACTION BUTTONS */
+.paint-card button,
+.paint-actions button,
+.card-actions button {
+  margin-bottom: 0 !important;
+}
