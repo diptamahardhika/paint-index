@@ -37,6 +37,24 @@
 
     <main>
       <section id="panel-browse" class="panel active" role="tabpanel">
+        <div class="toolbar">
+          <input
+            type="search"
+            id="browse-search"
+            placeholder="Search by name, hex, Citadel #, Vallejo code…"
+            autocomplete="off"
+          />
+          <select id="browse-brand" aria-label="Brand filter">
+            <option value="all">All brands</option>
+            <option value="citadel">Citadel Colour</option>
+            <option value="vallejo">Vallejo</option>
+          </select>
+          <select id="browse-line" aria-label="Line filter">
+            <option value="all">All lines</option>
+          </select>
+        </div>
+        <p class="stats" id="browse-stats"></p>
+        <div id="browse-grid" class="grid"></div>
       </section>
 
       <section id="panel-inventory" class="panel" role="tabpanel">
@@ -59,6 +77,87 @@
           <button type="button" class="secondary" id="google-logout-button">
             Sign out
           </button>
+        </div>
+
+        <div class="inventory-header">
+          <div class="profile-card">
+            <label for="inventory-profile-name">Profile</label>
+            <input
+              type="text"
+              id="inventory-profile-name"
+              autocomplete="off"
+              maxlength="48"
+            />
+          </div>
+          <div class="inventory-summary" id="inventory-summary"></div>
+        </div>
+
+        <div class="toolbar">
+          <input
+            type="search"
+            id="inventory-search"
+            placeholder="Search paints to add, or leave blank to view your inventory…"
+            autocomplete="off"
+          />
+          <select id="inventory-status" aria-label="Inventory status filter">
+            <option value="all">Owned & wishlist</option>
+            <option value="owned">Owned</option>
+            <option value="wishlist">Wishlist</option>
+          </select>
+          <select id="inventory-brand" aria-label="Inventory brand filter">
+            <option value="all">All brands</option>
+            <option value="citadel">Citadel Colour</option>
+            <option value="vallejo">Vallejo</option>
+          </select>
+          <select id="inventory-sort" aria-label="Inventory sort order">
+            <option value="name">Sort: Name</option>
+            <option value="hue">Sort: Hue</option>
+            <option value="brand">Sort: Brand</option>
+          </select>
+          <button type="button" class="secondary" id="inventory-export">
+            Export JSON
+          </button>
+        </div>
+        <p class="stats" id="inventory-stats"></p>
+        <div id="inventory-grid" class="grid"></div>
+      </section>
+
+      <section id="panel-match" class="panel" role="tabpanel">
+        <div class="split">
+          <div>
+            <div class="toolbar">
+              <input
+                type="search"
+                id="match-search"
+                placeholder="Find a paint to match…"
+                autocomplete="off"
+              />
+            </div>
+            <p class="stats" id="match-stats"></p>
+            <div id="match-grid" class="grid"></div>
+          </div>
+          <div>
+            <div id="match-detail" class="detail-panel empty">
+              Select a paint to see the closest matches in the other brand.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-hex" class="panel" role="tabpanel">
+        <div class="hex-lab">
+          <article class="hex-card">
+            <h3>HEX ↔ RGB converter</h3>
+            <div
+              class="hex-preview"
+              id="hex-preview"
+              style="background: #231f20"
+            ></div>
+            <div class="field-row">
+              <label for="hex-input">HEX</label>
+              <input type="text" id="hex-input" value="#231f20" spellcheck="false" />
+            </div>
+          </article>
         </div>
       </section>
     </main>
