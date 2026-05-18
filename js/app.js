@@ -17,6 +17,22 @@ import {
   findById,
   getCitadelIndexRange,
 } from "./data.js";
+import {
+  activeProfile,
+  getInventoryItem,
+  getInventorySort,
+  inventoryCounts,
+  setInventorySort,
+  setInventoryStatus as updateInventoryStatus,
+  setProfileName,
+  subscribe as subscribeToInventory,
+} from "./stores/inventoryStore.js?v=1.0.0-beta.5";
+import {
+  hydrateInventoryFromCloud,
+  overwriteCloudInventory,
+  setCurrentUser,
+  subscribeToSyncState,
+} from "./services/inventorySyncService.js?v=1.0.0-beta.5";
 
 const state = {
   selectedMatch: null,
@@ -26,14 +42,11 @@ const state = {
   inventoryQuery: "",
   inventoryStatus: "all",
   inventoryBrand: "all",
-  inventorySort: localStorage.getItem("paint-index.inventory-sort") || "name",
-  inventory: null,
+  inventorySort: getInventorySort(),
   hexSync: true,
 };
 
 const $ = (sel) => document.querySelector(sel);
-const INVENTORY_STORAGE_KEY = "paint-index.inventory.v1";
-const INVENTORY_SORT_STORAGE_KEY = "paint-index.inventory-sort";
 
 function getPaintHue(hex) {
   const rgb = hexToRgb(hex);
@@ -94,115 +107,10 @@ function sortInventoryCards(cards) {
   });
 }
 
-function createDefaultInventory() {
-  const now = new Date().toISOString();
-  return {
-    version: 1,
-    activeProfileId: "default",
-    profiles: [
-      {
-        id: "default",
-        name: "My paints",
-        createdAt: now,
-        updatedAt: now,
-        items: {},
-      },
-    ],
-  };
-}
-
-function normalizeInventory(raw) {
-  const fallback = createDefaultInventory();
-  if (!raw || typeof raw !== "object") return fallback;
-  const profiles = Array.isArray(raw.profiles)
-    ? raw.profiles
-        .filter((p) => p && typeof p === "object")
-        .map((p) => ({
-          id: String(p.id || "default"),
-          name: String(p.name || "My paints").slice(0, 48),
-          createdAt: p.createdAt || new Date().toISOString(),
-          updatedAt: p.updatedAt || new Date().toISOString(),
-          items: p.items && typeof p.items === "object" ? p.items : {},
-        }))
-    : [];
-  fallback.profiles = profiles.length ? profiles : fallback.profiles;
-  fallback.activeProfileId =
-    raw.activeProfileId &&
-    fallback.profiles.some((p) => p.id === raw.activeProfileId)
-      ? raw.activeProfileId
-      : fallback.profiles[0].id;
-  return fallback;
-}
-
-function loadInventoryState() {
-  try {
-    const raw = localStorage.getItem(INVENTORY_STORAGE_KEY);
-    return normalizeInventory(raw ? JSON.parse(raw) : null);
-  } catch {
-    return createDefaultInventory();
-  }
-}
-
-function saveInventoryState() {
-  if (!state.inventory) return;
-  try {
-    localStorage.setItem(
-      INVENTORY_STORAGE_KEY,
-      JSON.stringify(state.inventory)
-    );
-  } catch {
-    showToast("Inventory could not be saved");
-  }
-}
-
-function activeProfile() {
-  if (!state.inventory) state.inventory = createDefaultInventory();
-  let profile = state.inventory.profiles.find(
-    (p) => p.id === state.inventory.activeProfileId
-  );
-  if (!profile) {
-    profile = state.inventory.profiles[0];
-    state.inventory.activeProfileId = profile.id;
-  }
-  return profile;
-}
-
-function paintKey(p) {
-  return `${p.brand}:${p.id}`;
-}
-
-function getInventoryItem(p) {
-  return activeProfile().items[paintKey(p)] || null;
-}
-
 function setInventoryStatus(p, status) {
-  const profile = activeProfile();
-  const key = paintKey(p);
-  const now = new Date().toISOString();
-  if (!status) {
-    delete profile.items[key];
-    profile.updatedAt = now;
-    saveInventoryState();
-    refreshInventoryViews();
-    showToast("Removed from inventory");
-    return;
-  }
-  profile.items[key] = {
-    ...(profile.items[key] || { addedAt: now }),
-    status,
-    updatedAt: now,
-  };
-  profile.updatedAt = now;
-  saveInventoryState();
+  const result = updateInventoryStatus(p, status);
   refreshInventoryViews();
-  showToast(status === "owned" ? "Marked as owned" : "Added to wishlist");
-}
-
-function inventoryCounts() {
-  const items = Object.values(activeProfile().items);
-  const owned = items.filter((item) => item.status === "owned").length;
-  const wishlist = items.filter((item) => item.status === "wishlist").length;
-  return { owned, wishlist, total: owned + wishlist };
+  showToast(result.message);
 }
 
 function showToast(msg = "Copied") {
@@ -678,12 +586,61 @@ function bindBrowse() {
   $("#match-search").addEventListener("input", renderMatchGrid);
 }
 
+function renderSyncState(sync) {
+  const status = $("#auth-sync-status");
+  const overwrite = $("#inventory-overwrite-cloud");
+
+  if (status) {
+    status.textContent = sync.message;
+  }
+
+  if (overwrite) {
+    overwrite.disabled =
+      sync.status === "loading" ||
+      sync.status === "saving" ||
+      sync.status === "signed-out";
+  }
+}
+
+function resolveInventoryConflict({ cloudInventory, localInventory }) {
+  const cloudCounts = inventoryCounts(cloudInventory);
+  const localCounts = inventoryCounts(localInventory);
+  const message = [
+    "Your Google account already has a different inventory.",
+    "",
+    `Cloud: ${cloudCounts.total} paint${cloudCounts.total === 1 ? "" : "s"}`,
+    `This device: ${localCounts.total} paint${localCounts.total === 1 ? "" : "s"}`,
+    "",
+    "Type merge to combine both inventories, keeping the newest status for matching paints.",
+    "Type cloud to load Google inventory only.",
+    "Type local to overwrite Google inventory with this device.",
+  ].join("\n");
+  const choice = window.prompt(message, "merge")?.trim().toLowerCase();
+
+  return ["cloud", "local", "merge"].includes(choice) ? choice : "merge";
+}
+
+async function handleAuthChanged(user) {
+  setCurrentUser(user);
+
+  if (!user) {
+    return;
+  }
+
+  try {
+    await hydrateInventoryFromCloud({
+      resolveConflict: resolveInventoryConflict,
+    });
+    refreshInventoryViews();
+  } catch (error) {
+    console.error("Inventory hydration failed", error);
+    showToast("Cloud inventory could not be loaded");
+  }
+}
+
 function bindInventory() {
   $("#inventory-profile-name").addEventListener("input", (e) => {
-    const profile = activeProfile();
-    profile.name = e.target.value.trim() || "My paints";
-    profile.updatedAt = new Date().toISOString();
-    saveInventoryState();
+    setProfileName(e.target.value);
     renderInventory();
   });
   $("#inventory-search").addEventListener("input", (e) => {
@@ -700,7 +657,7 @@ function bindInventory() {
   });
   $("#inventory-sort").addEventListener("change", (e) => {
     state.inventorySort = e.target.value;
-    localStorage.setItem(INVENTORY_SORT_STORAGE_KEY, state.inventorySort);
+    setInventorySort(state.inventorySort);
     renderInventory();
   });
   $("#inventory-export").addEventListener("click", () => {
@@ -708,6 +665,40 @@ function bindInventory() {
     copyText(payload);
     showToast("Inventory JSON copied");
   });
+  $("#inventory-overwrite-cloud")?.addEventListener("click", async () => {
+    const confirmed = window.confirm(
+      "Overwrite your Google cloud inventory with the inventory on this device?"
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    const saved = await overwriteCloudInventory();
+    showToast(saved ? "Cloud inventory overwritten" : "Cloud overwrite failed");
+  });
+}
+
+function bindCloudSync() {
+  subscribeToInventory((_inventory, change) => {
+    if (change?.source === "cloud") {
+      refreshInventoryViews();
+    }
+
+    if (change?.source === "local" && !change.saved) {
+      showToast("Inventory could not be saved");
+    }
+  });
+
+  subscribeToSyncState(renderSyncState);
+
+  window.addEventListener("paint-index-auth-changed", (event) => {
+    handleAuthChanged(event.detail.user);
+  });
+
+  if ("__PAINT_INDEX_AUTH_USER__" in window) {
+    handleAuthChanged(window.__PAINT_INDEX_AUTH_USER__);
+  }
 }
 
 async function init() {
@@ -717,10 +708,10 @@ async function init() {
     document.body.innerHTML = `<main style="padding:2rem;font-family:system-ui"><h1>Could not load paint data</h1><p>Start a local server in the <code>paint-index</code> folder:</p><pre>cd paint-index && python3 -m http.server 8081</pre><p>Then open <a href="http://localhost:8081">http://localhost:8081</a></p><pre>${escapeHtml(String(err))}</pre></main>`;
     return;
   }
-  state.inventory = loadInventoryState();
   bindTabs();
   bindBrowse();
   bindInventory();
+  bindCloudSync();
   bindHexLab();
   updateLineFilter();
   updateLookupRange();

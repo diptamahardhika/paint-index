@@ -2,7 +2,7 @@ import {
   loginWithGoogle,
   logoutUser,
   subscribeToAuth,
-} from './firebase/auth.js';
+} from './firebase/auth.js?v=1.0.0-beta.5';
 
 const authState = {
   user: null,
@@ -54,6 +54,8 @@ async function handleLogout() {
 }
 
 function dispatchAuthChanged(user) {
+  window.__PAINT_INDEX_AUTH_USER__ = user;
+
   window.dispatchEvent(
     new CustomEvent('paint-index-auth-changed', {
       detail: {
