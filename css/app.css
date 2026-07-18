@@ -1,3 +1,4 @@
+/* Updated CSS for Paint Index UI revamp */
 :root {
   --bg: #141312;
   --surface: #1e1c1a;
@@ -16,6 +17,25 @@
   --radius: 8px;
   --font: "IBM Plex Sans", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* Light theme overrides – toggled via .light-theme class on <body> */
+.light-theme {
+  --bg: #fdfdfd;
+  --surface: #ffffff;
+  --surface-2: #f5f5f5;
+  --border: #ddd;
+  --text: #222222;
+  --muted: #555555;
+  --accent: #0077cc;
+  --accent-dim: #005fa3;
+  /* Preserve brand colors */
+  --citadel: #1a4d8c;
+  --vallejo: #2d6b3a;
+  --excellent: #4caf7a;
+  --good: #8fbc6a;
+  --fair: #d4a84b;
+  --weak: #b06a6a;
 }
 
 *, *::before, *::after {
@@ -56,6 +76,12 @@ header p {
   margin: 0;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+/* Theme toggle button inherits secondary style and is aligned to the right */
+#theme-toggle {
+  margin-left: auto;
+  height: 44px;
 }
 
 /* NAVIGATION FIX */
@@ -172,6 +198,13 @@ select {
   font: inherit;
 }
 
+/* Focus styling for inputs and selects */
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
 input[type="search"] {
   flex: 1 1 320px;
 }
@@ -189,6 +222,12 @@ button.secondary {
   color: var(--text);
   min-height: 44px;
   padding: 0.7rem 1rem;
+}
+
+/* Focus styling for buttons */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 .stats {
@@ -448,21 +487,10 @@ button.secondary {
   border: 1px solid currentColor;
 }
 
-.match-score.excellent {
-  color: var(--excellent);
-}
-
-.match-score.good {
-  color: var(--good);
-}
-
-.match-score.fair {
-  color: var(--fair);
-}
-
-.match-score.weak {
-  color: var(--weak);
-}
+.match-score.excellent { color: var(--excellent); }
+.match-score.good { color: var(--good); }
+.match-score.fair { color: var(--fair); }
+.match-score.weak { color: var(--weak); }
 
 .grid {
   display: grid;
@@ -477,13 +505,15 @@ button.secondary {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.15s, transform 0.15s;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 .card:hover,
 .card.selected {
   border-color: var(--accent);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .card-swatch {
@@ -624,7 +654,6 @@ button.secondary {
 }
 
 /* AUTH BUTTON SPACING FIX */
-
 .auth-header,
 .auth-controls,
 .top-bar {
