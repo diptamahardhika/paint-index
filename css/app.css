@@ -216,13 +216,22 @@ button {
   margin-bottom: 1rem;
 }
 
-button.secondary {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  color: var(--text);
+#theme-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
   min-height: 44px;
-  padding: 0.7rem 1rem;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+#theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text);
+}
+
 
 /* Focus styling for buttons */
 button:focus {
