@@ -9,4 +9,13 @@ const firebaseConfig = {
   appId: window.__PAINT_INDEX_FIREBASE_CONFIG__?.appId,
 };
 
-export const firebaseApp = initializeApp(firebaseConfig);
+export const isFirebaseConfigured = Boolean(
+  firebaseConfig.apiKey &&
+    firebaseConfig.authDomain &&
+    firebaseConfig.projectId &&
+    firebaseConfig.appId
+);
+
+export const firebaseApp = isFirebaseConfigured
+  ? initializeApp(firebaseConfig)
+  : null;
