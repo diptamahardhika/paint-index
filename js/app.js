@@ -151,8 +151,8 @@ function paintCard(p, { onClick, selected = false, showInventory = true } = {}) 
     inventoryItem?.status === "owned"
       ? "Owned"
       : inventoryItem?.status === "wishlist"
-        ? "Wishlist"
-        : "";
+      ? "Wishlist"
+      : "";
   const el = document.createElement("article");
   el.className = "card" + (selected ? " selected" : "");
   el.dataset.brand = p.brand;
@@ -701,6 +701,29 @@ function bindCloudSync() {
   }
 }
 
+/* Theme initialization and toggle */
+function initTheme() {
+  const stored = localStorage.getItem('theme');
+  if (stored === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const toggleBtn = $('#theme-toggle');
+  if (toggleBtn) {
+    const setIcon = () => {
+      const isLight = document.body.classList.contains('light-theme');
+      toggleBtn.innerHTML = isLight ? '☀️' : '🌙';
+      toggleBtn.title = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    };
+    // Initialize icon based on current theme
+    setIcon();
+    toggleBtn.addEventListener('click', () => {
+      const nowLight = document.body.classList.toggle('light-theme');
+      localStorage.setItem('theme', nowLight ? 'light' : 'dark');
+      setIcon();
+    });
+  }
+}
+
 async function init() {
   try {
     await loadPaints();
@@ -713,6 +736,7 @@ async function init() {
   bindInventory();
   bindCloudSync();
   bindHexLab();
+  initTheme();
   updateLineFilter();
   updateLookupRange();
   $("#inventory-sort").value = state.inventorySort;
