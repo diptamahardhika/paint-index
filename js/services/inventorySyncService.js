@@ -195,7 +195,9 @@ export async function syncInventoryToCloud() {
     return true;
   } catch (error) {
     console.error('Inventory cloud sync failed', error);
-    setSyncState('error', 'Cloud sync failed');
+    const errorMessage = error?.message || error?.code || 'Unknown error';
+    console.error('Sync error details:', errorMessage, error?.code, error?.details);
+    setSyncState('error', `Cloud sync failed: ${errorMessage}`);
     return false;
   }
 }
@@ -225,7 +227,9 @@ export async function overwriteCloudInventory() {
     return true;
   } catch (error) {
     console.error('Overwrite cloud inventory failed', error);
-    setSyncState('error', 'Overwrite cloud failed');
+    const errorMessage = error?.message || error?.code || 'Unknown error';
+    console.error('Overwrite error details:', errorMessage, error?.code, error?.details);
+    setSyncState('error', `Overwrite cloud failed: ${errorMessage}`);
     return false;
   }
 }
