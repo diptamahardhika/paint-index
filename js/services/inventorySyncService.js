@@ -5,7 +5,7 @@ import {
   replaceInventoryState,
   subscribe,
 } from '../stores/inventoryStore.js?v=1.0.0-beta.5';
-import { loadInventory, saveInventory } from '../firebase/firestore.js?v=1.0.0-beta.5';
+import { loadInventory, saveInventory, overwriteInventory } from '../firebase/firestore.js?v=1.0.0-beta.5';
 
 const SYNC_DELAY_MS = 1500;
 
@@ -218,7 +218,16 @@ export async function overwriteCloudInventory() {
     return false;
   }
 
-  return syncInventoryToCloud();
+  try {
+    setSyncState('saving', 'Overwriting cloud inventory...');
+    await overwriteInventory(currentUid, getInventoryState());
+    setSyncState('synced', 'Cloud inventory overwritten');
+    return true;
+  } catch (error) {
+    console.error('Overwrite cloud inventory failed', error);
+    setSyncState('error', 'Overwrite cloud failed');
+    return false;
+  }
 }
 
 subscribe((_inventory, change) => {
