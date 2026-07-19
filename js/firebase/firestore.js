@@ -31,6 +31,16 @@ export async function saveInventory(uid, inventory) {
   );
 }
 
+export async function overwriteInventory(uid, inventory) {
+  const ref = doc(requireFirestore(), 'users', uid, 'inventory', 'default');
+
+  await setDoc(ref, {
+    inventory,
+    updatedAt: Date.now(),
+    version: 1,
+  });
+}
+
 export async function loadInventory(uid) {
   const ref = doc(requireFirestore(), 'users', uid, 'inventory', 'default');
 
