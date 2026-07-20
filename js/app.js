@@ -662,9 +662,16 @@ function bindInventory() {
     renderInventory();
   });
   $("#inventory-export").addEventListener("click", () => {
-    const payload = JSON.stringify(activeProfile(), null, 2);
-    copyText(payload);
-    showToast("Inventory JSON copied");
+    const profile = activeProfile();
+    const payload = JSON.stringify(profile, null, 2);
+    const blob = new Blob([payload], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `paint-index-${profile.name.replace(/\s+/g, "-").toLowerCase()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast("Inventory JSON downloaded");
   });
   $("#inventory-overwrite-cloud")?.addEventListener("click", async () => {
     const confirmed = window.confirm(

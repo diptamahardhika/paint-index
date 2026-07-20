@@ -216,6 +216,22 @@ button {
   margin-bottom: 1rem;
 }
 
+button.secondary,
+.secondary {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  min-height: 44px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.toolbar button.secondary,
+.toolbar .secondary {
+  margin-bottom: 0;
+}
+
 #theme-toggle {
   background: transparent;
   border: none;
