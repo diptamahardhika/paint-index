@@ -4,13 +4,21 @@ Cross-reference **Citadel Colour** and **Vallejo** hobby paints with HEX / Bolte
 
 ## Run locally
 
-Browsers block loading JSON over `file://`. From this folder:
+Browsers enforce a security policy called **CORS (Cross-Origin Resource Sharing)** that blocks JavaScript from loading local files (like `data/citadel.json` and `data/vallejo.json`) when you open `index.html` directly via double-click or `file://` URLs.
+
+To work around this, you need to serve the files over HTTP instead of the file system. The simplest way is using Python's built-in web server:
 
 ```bash
 python3 -m http.server 8081
 ```
 
-Open [http://localhost:8081](http://localhost:8081).
+Then open **http://localhost:8081** in your browser.
+
+> **Tip:** If you don't have Python, you can also use:
+> - **Node.js:** `npx serve` or `npx http-server`
+> - **VS Code:** "Live Server" extension → right-click `index.html` → "Open with Live Server"
+> - **PHP:** `php -S localhost:8081`
+> - **Go:** `go run github.com/traefik/yaegi/cmd/yaegi@latest -exec 'http.ListenAndServe(":8081", http.FileServer(http.Dir(".")))'`
 
 ## Run with Docker
 
