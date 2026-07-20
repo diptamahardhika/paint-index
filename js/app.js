@@ -592,6 +592,7 @@ function renderSyncState(sync) {
 
   if (status) {
     status.textContent = sync.message;
+    status.className = `sync-status ${sync.status}`;
   }
 
   if (overwrite) {
