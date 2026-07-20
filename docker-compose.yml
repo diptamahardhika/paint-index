@@ -1,6 +1,6 @@
 services:
   paint-index:
-    image: ghcr.io/diptamahardhika/paint-index:v1.0.0-beta.4
+    image: ghcr.io/diptamahardhika/paint-index:latest
     container_name: paint-index-app
     pull_policy: always
     ports:
