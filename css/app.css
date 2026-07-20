@@ -56,6 +56,8 @@ main {
   max-width: 1320px;
   margin: 0 auto;
   padding: 1.5rem 1.5rem 3rem;
+  container-type: inline-size;
+  container-name: main-container;
 }
 
 header {
@@ -544,8 +546,38 @@ button:focus {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
   gap: 1rem;
+}
+
+@container (min-width: 440px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  }
+}
+
+@container (min-width: 660px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  }
+}
+
+@container (min-width: 880px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  }
+}
+
+@container (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  }
+}
+
+@container (min-width: 1320px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  }
 }
 
 .card {
@@ -685,7 +717,7 @@ button:focus {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
   }
 
   .field-row {
