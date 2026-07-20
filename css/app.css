@@ -310,7 +310,32 @@ button:focus {
 }
 
 .sync-status {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sync-status.synced {
+  color: var(--excellent);
+}
+
+.sync-status.saving,
+.sync-status.pending {
+  color: var(--fair);
+}
+
+.sync-status.loading {
   color: var(--accent);
+}
+
+.sync-status.error {
+  color: var(--weak);
+}
+
+.sync-status.signed-out {
+  color: var(--muted);
 }
 
 .inventory-summary {
