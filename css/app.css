@@ -50,6 +50,8 @@ html, body {
   font-family: var(--font);
   font-size: 15px;
   line-height: 1.5;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 main {
@@ -669,7 +671,37 @@ button:focus {
   }
 }
 
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #theme-toggle {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
 @media (max-width: 768px) {
+  nav.tabs {
+    gap: 0.25rem;
+    padding: 0.5rem 1rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  nav.tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav.tabs button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
   .inventory-header {
     padding: 1rem;
   }
@@ -679,8 +711,12 @@ button:focus {
     width: 100%;
   }
 
-  .profile-card,
   .inventory-auth-user {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+
+  .profile-card {
     min-width: 100%;
   }
 
@@ -700,6 +736,10 @@ button:focus {
   .match-score {
     grid-column: 1 / -1;
     text-align: left;
+  }
+
+  .toolbar input[type="search"] {
+    flex: 1 1 100%;
   }
 }
 
